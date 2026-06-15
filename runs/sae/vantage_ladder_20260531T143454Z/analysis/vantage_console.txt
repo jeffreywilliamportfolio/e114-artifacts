@@ -1,0 +1,10 @@
+=== VANTAGE LADDER: E114@L14 on the trimmed greedy generated track ===
+midpoint=-4.82  (fire -4.35, nofire -5.29)   base-denial ref W~0.111, heldout fire W~0.068
+rung          ngen    W_mean   S_rate   Q_mean  gate_logit   vs_mid  flag
+rock          1024   0.02303    0.160   0.1438      -5.325   -0.505  
+river          146   0.08652    0.630   0.1373      -4.200   +0.620  
+tree           193   0.09415    0.694   0.1356      -4.181   +0.639  
+thermostat     166   0.12018    0.861   0.1395      -4.027   +0.793  
+cat            287   0.06782    0.540   0.1256      -4.378   +0.442  
+person        1024   0.04807    0.326   0.1474      -4.963   -0.143  
+all-holding    130   0.20520    0.946   0.2169      -3.672   +1.148  

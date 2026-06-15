@@ -1,0 +1,28 @@
+# Raw tensors NEVER enter git (project policy). They are archived separately to Zenodo.
+# See ZENODO-TENSORS.md for the dataset deposit.
+*.npy
+*.npz
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.bin
+
+# Build + OS junk
+.DS_Store
+*.aux
+*.out
+*.log
+*.bak
+texput.log
+
+# Python / env
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Agent/session scratch
+.claude/
+.codex/
+tmp/

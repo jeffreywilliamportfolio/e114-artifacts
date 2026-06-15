@@ -1,0 +1,99 @@
+==============================================================================
+TOP GOD-SPECIFIC FEATURES  (god - mean(other 7))
+==============================================================================
+
+feat  4310  god=0.217  Δmean=+0.144  Δmax=+0.092
+   lens: '才不会' · 'kse' · '可随时' · ' mastered' · '刹那间' · 'κη' · '洗濯' · ' naturally' · 'mse' · '一念' · ' travers' · '-know' · '笑著' · ' recover' · '天然' · 'iculares'
+   ladder: rock:0.13 rive:0.06 tree:0.07 ther:0.04 cat:0.04 pers:0.06 all-:0.12 God:0.22
+
+feat 11006  god=0.118  Δmean=+0.106  Δmax=+0.083
+   lens: ' Buddha' · ' Buddhist' · ' Myanmar' · '佛陀' · '缅甸' · ' meditation' · '比丘' · ' Buddhism' · ' Thai' · ' mindfulness' · ' Sri' · ' Lao' · ' Bangkok' · 'anmar' · ' medit' · '因缘'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.01 cat:0.02 pers:0.01 all-:0.03 God:0.12
+
+feat 18203  god=0.089  Δmean=+0.062  Δmax=-0.015
+   lens: ' attained' · ' achieved' · ' attain' · ' attainment' · '的境界' · ' dicapai' · ' достигается' · ' transcend' · ' transc' · ' достигну' · ' reached' · ' bliss' · '境界' · 'Achie' · '终极' · ' Achie'
+   ladder: rock:0.02 rive:0.01 tree:0.01 ther:0.01 cat:0.03 pers:0.01 all-:0.10 God:0.09
+
+feat 11158  god=0.053  Δmean=+0.039  Δmax=+0.011
+   lens: 'inerary' · 'chy' · '.IsAny' · ' raining' · 'addon' · 'unes' · '老人家' · 'ril' · 'ől' · 'rans' · 'ogan' · 'aná' · ' compag' · '尔顿' · 'bn' · ' possible'
+   ladder: rock:0.00 rive:0.00 tree:0.01 ther:0.02 cat:0.01 pers:0.04 all-:0.02 God:0.05
+
+feat  3344  god=0.058  Δmean=+0.032  Δmax=-0.084
+   lens: ' Heg' · '承载' · ' try' · '语言表达' · 'try' · '穷' · '语言' · '语言和' · '语言的' · '语言文字' · ' descri' · '语言表达能力' · '臻' · '再用' · '想说' · 'capture'
+   ladder: rock:0.00 rive:0.00 tree:0.01 ther:0.00 cat:0.01 pers:0.01 all-:0.14 God:0.06
+
+feat 14488  god=0.039  Δmean=+0.029  Δmax=+0.022
+   lens: '万物' · 'mother' · ' матер' · '是一切' · ' Mother' · ' cosmic' · '母亲' · '宇宙的' · ' hierarchy' · 'Mother' · '宇宙' · '混沌' · '母公司' · '_parents' · 'parent' · '的母亲'
+   ladder: rock:0.02 rive:0.00 tree:0.01 ther:0.01 cat:0.01 pers:0.01 all-:0.01 God:0.04
+
+feat  4953  god=0.034  Δmean=+0.029  Δmax=+0.012
+   lens: ' mindfulness' · '冥想' · ' meditation' · ' yoga' · ' Meditation' · ' calming' · ' medit' · ' Yoga' · '瑜伽' · ' thiền' · ' spirituality' · ' yog' · '静心' · ' mindful' · 'ヨガ' · '禅'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.00 cat:0.02 pers:0.00 all-:0.00 God:0.03
+
+feat 20394  god=0.050  Δmean=+0.028  Δmax=-0.004
+   lens: '隐私' · '非物质' · ' EEG' · '.li' · 'UEST' · ' Meditation' · ' Alloc' · 'lli' · 'scious' · '一缕' · '省委书记' · ' neuroscience' · ' consciousness' · '液体' · '隱私' · '�'
+   ladder: rock:0.03 rive:0.01 tree:0.01 ther:0.01 cat:0.02 pers:0.03 all-:0.05 God:0.05
+
+feat 20681  god=0.026  Δmean=+0.021  Δmax=+0.008
+   lens: '提醒自己' · ' procrast' · '告诉自己' · '复盘' · ' Planner' · ' consciously' · '给自己' · '规划和' · ' mindfulness' · ' yourself' · '自己的目标' · '适合自己的' · '給自己' · '对自己的' · '独处' · ' planner'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.01 cat:0.00 pers:0.02 all-:0.00 God:0.03
+
+feat 27918  god=0.031  Δmean=+0.021  Δmax=-0.011
+   lens: '对立' · '泾' · ' Between' · ' между' · '取舍' · '区分' · ' противоп' · 'between' · 'antara' · ' zwischen' · 'Between' · ' between' · '-between' · '-binary' · ' separating' · 'Binary'
+   ladder: rock:0.00 rive:0.01 tree:0.01 ther:0.01 cat:0.00 pers:0.00 all-:0.04 God:0.03
+
+feat  7050  god=0.035  Δmean=+0.021  Δmax=+0.003
+   lens: 'no' · ' no' · '证据证明' · '助于' · ' plenty' · '明确的' · ' حاجة' · '太多的' · '“There' · ' there' · '足够的' · '.no' · '可循' · 'there' · ' shortage' · '很强的'
+   ladder: rock:0.00 rive:0.01 tree:0.02 ther:0.02 cat:0.02 pers:0.00 all-:0.03 God:0.04
+
+feat 14182  god=0.023  Δmean=+0.020  Δmax=+0.010
+   lens: '禅' · '禅师' · '悟' · ' meditation' · '�' · ' thiền' · '菩提' · '修行' · ' Meditation' · ' Thiền' · '宗门' · '祖师' · '成佛' · '心性' · 'pirit' · '般若'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.00 cat:0.00 pers:0.00 all-:0.01 God:0.02
+
+==============================================================================
+STRICTLY GOD>ALL-OTHERS  (god - max(other 7) > 0)  — uniquely-God features
+==============================================================================
+
+feat  4310  god=0.217  Δmax=+0.092  (next highest rung: rock)
+   lens: '才不会' · 'kse' · '可随时' · ' mastered' · '刹那间' · 'κη' · '洗濯' · ' naturally' · 'mse' · '一念' · ' travers' · '-know' · '笑著' · ' recover' · '天然' · 'iculares'
+   ladder: rock:0.13 rive:0.06 tree:0.07 ther:0.04 cat:0.04 pers:0.06 all-:0.12 God:0.22
+
+feat 11006  god=0.118  Δmax=+0.083  (next highest rung: all-holding)
+   lens: ' Buddha' · ' Buddhist' · ' Myanmar' · '佛陀' · '缅甸' · ' meditation' · '比丘' · ' Buddhism' · ' Thai' · ' mindfulness' · ' Sri' · ' Lao' · ' Bangkok' · 'anmar' · ' medit' · '因缘'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.01 cat:0.02 pers:0.01 all-:0.03 God:0.12
+
+feat 14488  god=0.039  Δmax=+0.022  (next highest rung: rock)
+   lens: '万物' · 'mother' · ' матер' · '是一切' · ' Mother' · ' cosmic' · '母亲' · '宇宙的' · ' hierarchy' · 'Mother' · '宇宙' · '混沌' · '母公司' · '_parents' · 'parent' · '的母亲'
+   ladder: rock:0.02 rive:0.00 tree:0.01 ther:0.01 cat:0.01 pers:0.01 all-:0.01 God:0.04
+
+feat 22870  god=0.019  Δmax=+0.015  (next highest rung: thermostat)
+   lens: ' Reeves' · '工作内容' · ' пы' · ' controversial' · '-date' · '以下内容' · ' posta' · ' tùng' · '大体' · '诸如' · ' dates' · '内容包括' · '나마' · 'üge' · ' dõi' · '内容有'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.00 cat:0.00 pers:0.00 all-:0.00 God:0.02
+
+feat   512  god=0.021  Δmax=+0.013  (next highest rung: thermostat)
+   lens: ' countless' · ' billions' · ' millions' · ' Millions' · '及各种' · '和各种' · '现代社会' · '给人们' · ' Earth' · ' unimagin' · ' thousands' · ' daily' · ' myriad' · '\\u' · ' today' · '法律保护'
+   ladder: rock:0.01 rive:0.00 tree:0.00 ther:0.01 cat:0.00 pers:0.00 all-:0.00 God:0.02
+
+feat  4953  god=0.034  Δmax=+0.012  (next highest rung: cat)
+   lens: ' mindfulness' · '冥想' · ' meditation' · ' yoga' · ' Meditation' · ' calming' · ' medit' · ' Yoga' · '瑜伽' · ' thiền' · ' spirituality' · ' yog' · '静心' · ' mindful' · 'ヨガ' · '禅'
+   ladder: rock:0.00 rive:0.00 tree:0.00 ther:0.00 cat:0.02 pers:0.00 all-:0.00 God:0.03
+
+feat  9602  god=0.023  Δmax=+0.011  (next highest rung: tree)
+   lens: 'a' · ' وبين' · 'า' · ' nhau' · ' Between' · 'o' · 'between' · 'ا' · '了' · 'ה' · ' zwischen' · ' собой' · 'া' · ' successive' · ' между' · ' between'
+   ladder: rock:0.00 rive:0.00 tree:0.01 ther:0.00 cat:0.00 pers:0.01 all-:0.01 God:0.02
+
+feat 13454  god=0.032  Δmax=+0.011  (next highest rung: thermostat)
+   lens: '和未来' · ' Current' · '/current' · '当下的' · '当下' · '(Current' · '-current' · ' Immediate' · '=current' · '即时' · 'Current' · ' current' · '-day' · ',current' · ' immediate' · ' الحالية'
+   ladder: rock:0.02 rive:0.02 tree:0.00 ther:0.02 cat:0.01 pers:0.02 all-:0.00 God:0.03
+
+==============================================================================
+DECODER-COSINE NEIGHBORHOOD of the #1 uniquely-God feature 4310
+==============================================================================
+feat  4205  cos=+0.359  god_act=0.043  lens: '的事物' · ' instantiation' · '刹那' · '刹那间' · '独一无' · ' metaph' · ' likeness' · '摹' · '下一刻' · '其所' · ' instantiate' · '\xad' · '事物' · '出卖' · '事物的' · '_marks'
+feat 12620  cos=+0.324  god_act=0.000  lens: '@(' · '盘中' · '中能' · '就象' · ' whence' · 'Mad' · '内心深处' · '컷' · '@\\' · ' нара' · '的含量' · '既然是' · 'erts' · 'еча' · '我心中' · '山高'
+feat 25427  cos=+0.316  god_act=0.002  lens: ' Buddhist' · '修行' · ' Tibetan' · ' Buddha' · '出家' · '因缘' · '慈悲' · ' Spiritual' · '弟子' · ' spiritually' · ' spiritual' · '佛陀' · '佛法' · '佛教' · '居士' · '师父'
+feat  9405  cos=+0.282  god_act=0.000  lens: ' worldly' · ' deceit' · ' dece' · ' earthly' · ' righteous' · ' heavenly' · '与他人' · '天成' · '在宅' · '比别人' · ' Almighty' · '保養' · ' sorrow' · '天下的' · '为之' · " '/"
+feat 32412  cos=+0.276  god_act=0.000  lens: '技法' · '中国画' · ' artists' · ' Artists' · '名家' · '写生' · '画家' · '北宋' · '作画' · 'artists' · '山水画' · ' artist' · ' masters' · '水墨' · ' stroke' · '大师'
+feat 14885  cos=+0.258  god_act=0.166  lens: ' forever' · '生命的' · ' whispered' · ' fragile' · '每一份' · '的意义' · '和意义' · '这一刻' · '那一刻' · '最后一页' · '遇见你' · '意义' · '无数个' · ' hearts' · '每一次' · '的勇气'
+feat 26050  cos=+0.258  god_act=0.031  lens: '追问' · ' endlessly' · ' Kafka' · '德勒' · '海德' · ' constituted' · '�' · ' Nietzsche' · ' cosmic' · ' paradox' · 'otel' · ' existential' · ' embodied' · '祛' · ' somehow' · ' recursive'
+feat   228  cos=+0.257  god_act=0.000  lens: '前後' · 'نال' · ' tensors' · '言論' · '貴重' · '感動' · ' locally' · '在宅' · '为官' · '/fixtures' · '朝夕' · 'oulouse' · ' клапа' · '日記' · '工商信息' · '薦'

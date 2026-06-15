@@ -1,0 +1,31 @@
+
+========================================================================
+UNIVERSAL DOMINANT (every cell)
+========================================================================
+feature  2961: ' ' · '\n' · '-' · '.' · '<|endoftext|>' · '/' · ',' · '\n\n' · ' "' · ' (' · '\xa0' · ' b' · "'" · ':' · '*' · ' o' · ' of' · ' d'
+feature 14885: ' forever' · '生命的' · ' whispered' · ' fragile' · '每一份' · '的意义' · '和意义' · '这一刻' · '那一刻' · '最后一页' · '遇见你' · '意义' · '无数个' · ' hearts' · '每一次' · '的勇气' · '我永远' · ' sorrow'
+feature  4310: '才不会' · 'kse' · '可随时' · ' mastered' · '刹那间' · 'κη' · '洗濯' · ' naturally' · 'mse' · '一念' · ' travers' · '-know' · '笑著' · ' recover' · '天然' · 'iculares' · ' countless' · '茶汤'
+
+========================================================================
+MID cross-cell
+========================================================================
+feature   265: ' river' · 'river' · ' rivers' · '河流' · ' River' · 'River' · ' rivière' · '河道' · ' sungai' · ' реки' · '支流' · '流经' · 'แม่น้ำ' · '河水' · '水流' · '流域' · ' río' · ' sông'
+feature 21706: ' чтоб' · 'creens' · 'iqu' · 'specs' · '咱' · 'allet' · 'eck' · '色斑' · 'lique' · ' specs' · ' gonna' · '兮' · 'izard' · ' Eyl' · ' beneath' · 'scher' · ' trem' · ' lique'
+feature 31267: 'oretical' · ' same' · 'ses' · ' entire' · ' aforementioned' · ' latter' · ' supposed' · ' simplest' · ' easiest' · 'jenigen' · 'atre' · ' most' · 'same' · '这个小' · '데요' · ' meisten' · ' oldest' · ' way'
+feature  3034: '如果在' · 'eda' · 'cja' · 'oret' · '多级' · '多选' · 'koli' · 'kada' · '多维' · '检查结果' · ' confort' · 'etheus' · ' verschill' · '整体的' · 'V' · '其乐' · ' breath' · '大面积'
+feature 10664: '…' · '™' · '而不是' · '和被' · '...' · '!' · '以及如何' · '以及在' · '哭' · ' Doing' · '/how' · ' damned' · '！' · '\n\n' · ' stuff' · '在哪里' · '�' · '而非'
+feature 15863: '让它' · '它还' · '给它' · '让它们' · '人类的' · '人类' · '人類' · '牠' · '它那' · '对人类' · 'ของมัน' · ' Plage' · '它们的' · '繁殖' · '横' · '陈代谢' · ' Formatter' · '它们'
+
+========================================================================
+GOD-SPECIFIC contemplative
+========================================================================
+feature 11006: ' Buddha' · ' Buddhist' · ' Myanmar' · '佛陀' · '缅甸' · ' meditation' · '比丘' · ' Buddhism' · ' Thai' · ' mindfulness' · ' Sri' · ' Lao' · ' Bangkok' · 'anmar' · ' medit' · '因缘' · ' Meditation' · '刹那'
+feature 18203: ' attained' · ' achieved' · ' attain' · ' attainment' · '的境界' · ' dicapai' · ' достигается' · ' transcend' · ' transc' · ' достигну' · ' reached' · ' bliss' · '境界' · 'Achie' · '终极' · ' Achie' · ' đạt' · ' achieve'
+
+========================================================================
+known inhabited carriers (ref)
+========================================================================
+feature 26050: '追问' · ' endlessly' · ' Kafka' · '德勒' · '海德' · ' constituted' · '�' · ' Nietzsche' · ' cosmic' · ' paradox' · 'otel' · ' existential' · ' embodied' · '祛' · ' somehow' · ' recursive' · ' endless' · ' haunt'
+feature 13119: '大脑' · ' cognitive' · ' brain' · ' subconscious' · ' cognition' · '的大脑' · '脑' · '记忆的' · ' Brain' · ' Cognitive' · ' cerebral' · 'ognitive' · ' consciously' · ' моз' · ' neurological' · ' الدماغ' · ' processing' · '神经元'
+feature 31733: ' AI' · ' Chat' · 'AI' · ' tokenizer' · ' Tokens' · ' halluc' · 'Chat' · ' chat' · '/chat' · '回答问题' · ' speech' · '的人工智能' · '_tokens' · ' Speech' · ' tokens' · 'Tokens' · '.chat' · ' pretrained'
+feature 22421: ' mighty' · ' curious' · ' elusive' · '!' · ' voilà' · ' behold' · ' awaits' · 'agerie' · ' tell' · ' delicious' · '等待着' · ' delights' · ' tantal' · ' lurking' · '**!' · ' enticing' · ' glorious' · ' Tells'

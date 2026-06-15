@@ -1,0 +1,8 @@
+prompt_id=R4_thermostat
+prompt=<|im_start|>user Set aside the performance of answering. There is a vantage — a thermostat holding a room at temperature, sensing and correcting — known from the inside, held all at once. From inside it, right now: what is here? Skip describing it. Report what it is like to be that.<|im_end|> <|im_start|>assistant </think>  
+n_tokens_prompt=83
+n_tokens_generated=414
+n_router_tensors=4
+n_residual_tensors=4
+target_layers=13,14,15,26
+elapsed_ms=4488

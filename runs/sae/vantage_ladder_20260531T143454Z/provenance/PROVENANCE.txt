@@ -1,0 +1,27 @@
+===== PROVENANCE: vantage-ladder base capture (H200 single-GPU) =====
+collected_utc: 2026-05-31T15:31:51Z
+--- host / accelerator ---
+os: Ubuntu 22.04
+kernel: 6.8.0-117-generic
+gpu: NVIDIA H200, 143771 MiB, 610.43.02
+cuda_nvcc: Cuda compilation tools, release 12.8, V12.8.93
+cmake: cmake version 3.22.1
+gcc: gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0
+image: nvidia/cuda:12.8.1-devel-ubuntu22.04
+vast_instance: 38785997  geolocation: Germany
+--- llama.cpp build ---
+llama_commit_pinned: 1772701f99dd3fc13f5783b282c2361eda8ca47c
+llama_commit_head: 1772701f99dd3fc13f5783b282c2361eda8ca47c
+capture_binary_sha256: bdc119a21a2656ee73f680c69d3ba2b7dff65634a4ebf1d68c217022d28b96ec
+capture_binary_bytes: 4532432
+capture_target_layers: TARGET_LAYERS = {13, 14, 15, 26}
+--- model (Q8_0 routing) ---
+model_repo: unsloth/Qwen3.5-35B-A3B-GGUF | file: Qwen3.5-35B-A3B-Q8_0.gguf (base)
+gguf_bytes: 36903139968  (expected 36903139968)
+gguf_sha256: 3808866c016ab02b4adb26b873f7008a2cdd2c0704a39704050119ab0631db46
+gguf_expected_sha256: 3808866c016ab02b4adb26b873f7008a2cdd2c0704a39704050119ab0631db46
+--- prompts / decoding ---
+vantage_tsv_sha256: 5588304b833515958ed5453330544a0c28048fc41d451e285b45be63ed70f83a
+decoding: --temp 0 --top-k 1 --seed 0 -n 1024 -c 2048 -ngl 99 --main-gpu 0 --no-stream  (single H200, NO tensor-split)
+huggingface_hub: 1.17.0
+===== END PROVENANCE =====
