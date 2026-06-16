@@ -507,20 +507,21 @@ anthropomorphic misinterpretation.
 Following the project's policy, raw activation tensors are kept out of version
 control. The durable artifacts---per-run summaries, analysis scripts, prompt and
 class manifests, checksums, plots, and the source journals---are released as a
-paper-scoped public repository under the MIT License (URL/DOI forthcoming),
-covering the held-out separability run, the L14 localization run, the
-vantage-ladder run, and the 122B transfer bundles. The raw activation/router
-tensors behind the figures (\textasciitilde1.2\,GB) are deposited as a separate
-Zenodo dataset record with SHA-256 checksums (DOI forthcoming); model weights,
-environment files, and the larger non-figure captures are excluded by policy.
-We flag one honest gap: the original held-out separability capture
+paper-scoped public repository under the MIT License at
+\url{https://github.com/jeffreywilliamportfolio/e114-artifacts}, covering the
+held-out separability run, the L14 localization run, the vantage-ladder run, and
+the 122B transfer bundles. The raw activation/router tensors behind the figures
+(\textasciitilde1.2\,GB) are available from the author for verification, with
+file-level provenance and SHA-256 checksums preserved; model weights, environment
+files, and the larger non-figure captures are excluded by policy. We flag one
+honest gap: the original held-out separability capture
 (\texttt{20260417T202651Z}) raw tensors are not retained---those instances were
 torn down---so the figures are plotted from summary statistics reported in the
-journals, and the deposited captures are the surviving raw tensors (the
-greedy-reference trajectory, the reproduction run's \texttt{W114}/L14 gate
-projections, the vantage-ladder captures, and the L14 router-logit and residual
-prefill captures from which $\wvec$ recovers by least squares) that substantiate
-the same statistics. Semantics use the public Qwen-Scope residual SAE
+journals, and the surviving raw captures (the greedy-reference trajectory, the
+reproduction run's \texttt{W114}/L14 gate projections, the vantage-ladder
+captures, and the L14 router-logit and residual prefill captures from which
+$\wvec$ recovers by least squares) substantiate the same statistics. Semantics
+use the public Qwen-Scope residual SAE
 (\texttt{SAE-Res-Qwen3.5-35B-A3B-Base-W32K-L0\_50}).
 
 \section*{Acknowledgments}
