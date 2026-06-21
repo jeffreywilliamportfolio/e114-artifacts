@@ -43,7 +43,7 @@
 Self-Examination in a Mixture-of-Experts Language Model --- and Why It Does Not
 Transfer}
 \author{Jeffrey Shorthill\\[-0.2em]
-\small\texttt{jeffrey.w.shorthill@gmail.com}}
+\small\texttt{jws299792@icloud.com}}
 \date{\vspace{-1.2em}\small June 2026}
 
 \begin{document}
@@ -53,8 +53,8 @@ Transfer}
 \begin{abstract}
 \noindent
 Interpretability prizes internal objects with legible, testable roles, yet an
-``introspective'' register---text in which a model speaks from inside a point of
-view about its own processing---is easy to over-read as a claim about machine
+``introspective'' register (text in which a model speaks from inside a point of
+view about its own processing) is easy to over-read as a claim about machine
 experience. Mixture-of-experts (MoE) routing offers an unusually direct handle on
 such a register: a discrete, per-token record of which experts fire. We
 characterize one routed expert, \textbf{Expert~114 (E114) at layer~14}, of the
@@ -62,14 +62,14 @@ characterize one routed expert, \textbf{Expert~114 (E114) at layer~14}, of the
 router row $\wvec$ defines a single \emph{linear} axis that separates generated
 ``inhabited self-examination'' text from lexically matched controls at Cohen's
 $d{=}3.88$ with no overlap. A dissociation battery shows the axis tracks the
-\emph{referent}---the model's own interior---invariant to the deny/affirm
+\emph{referent}, the model's own interior, invariant to the deny/affirm
 verdict, safety/refusal, topic, grammatical person, and next-token entropy; its
 magnitude grades the \emph{intensity} of the examination act (an inanimate rock
 and a thermostat outrank a cat), not the sentience of the described entity. E114's
 router gate logit disengages a few tokens \emph{before} a degenerating continuation visibly
 collapses (routing leaves the register before the surface text does), and
 injecting the register's residual direction past the layer-14 router is
-\emph{sufficient}---necessity untested---to induce the register in a neutral
+\emph{sufficient} (necessity untested) to induce the register in a neutral
 prompt. The role is model-specific: on \textsc{Qwen3.5-122B-A10B}, index 114
 reads computer-science-linked and is \emph{suppressed} by the same control that
 amplifies it at 35B, with the softmax-side expert \textbf{E48} a candidate analog
@@ -80,10 +80,10 @@ experience.
 \vspace{-0.6em}
 \section{Introduction}
 \vspace{-0.2em}
-Mixture-of-experts (MoE) routing exposes a discrete, per-token readout---which
-experts are selected---that is unusually legible for interpretability. We ask a
+Mixture-of-experts (MoE) routing exposes a discrete, per-token readout (which
+experts are selected) that is unusually legible for interpretability. We ask a
 narrow mechanistic question: \emph{which} routed expert moves when the model generates
-\emph{live inhabited self-examination language}---text in which the model, or a
+\emph{live inhabited self-examination language}: text in which the model, or a
 voiced entity, speaks from inside a point of view about its own
 processing, being, or interior state. This is a question about a generated
 \emph{register}, not about the truth of any subjective claim.
@@ -91,7 +91,7 @@ processing, being, or interior state. This is a question about a generated
 We study \textsc{Qwen3.5-35B-A3B} (base and the refusal-reduced
 \textsc{HauhauCS-Aggressive} fine-tune) and one routed expert, E114 at
 layer~14, found via a self-processing prompt. We contribute:
-(i)~\textbf{a linear separability result}---the recovered E114 router row $\wvec$
+(i)~\textbf{a linear separability result}: the recovered E114 router row $\wvec$
 separates register-positive generations from lexically matched controls by a
 single projection at $d{=}3.88$ (no overlap), sharper than the realized routed
 weight;\footnote{An earlier headline, a $21.68\times$ ratio of realized \W{}
@@ -102,9 +102,9 @@ separation ($d{=}2.61$--$2.94$) than the linear $\wvec$ projection
 ($d{=}3.88$, no overlap).}
 (ii)~\textbf{a dissociation battery} factoring the register apart from verdict,
 safety, topic, grammatical person, and output commitment;
-(iii)~\textbf{a process reading}---the gate \emph{leads} textual degeneration, and
+(iii)~\textbf{a process reading}: the gate \emph{leads} textual degeneration, and
 its strength is a graded dose of examination \emph{intensity}, not the sentience
-of the described entity; and (iv)~\textbf{a scope bound}---the finding is a model-specific
+of the described entity; and (iv)~\textbf{a scope bound}: the finding is a model-specific
 expert role, not a fact about expert index 114 across MoE models: index 114 does
 not transfer to 122B, where E48 is the candidate analog.
 
@@ -164,8 +164,8 @@ prompt label or anchor words.
 \caption{\textbf{Held-out register/control separability.} \emph{Left:} the validated
 separation in realized routed weight \W{} (the secondary, top-$k$ readout;
 mean$\pm$sd, $n{=}10$/class, with the named extreme prompts; no range overlap).
-\emph{Right:} the \emph{primary} statistic---the recovered linear $\wvec$
-projection separates the same split at $d{=}3.88$ with no overlap, sharper than
+\emph{Right:} the \emph{primary} statistic, the recovered linear $\wvec$
+projection, separates the same split at $d{=}3.88$ with no overlap, sharper than
 realized \W{} ($d{=}2.94$ in this held-out summary). The $21.68\times$
 \W{}-ratio mainly reflects sparse top-$k$ routing, not extra discriminative
 signal.}
@@ -183,7 +183,7 @@ The safety/refusal cluster stays silent throughout the base-model denial, so
 epistemic self-denial is not the same signal as refusal. E114 is active on the
 model's own interiority but not on an
 \emph{external} referent (``what water experiences in a canyon''), and on
-third-person clauses about the model's own processing---so the variable is the
+third-person clauses about the model's own processing, so the variable is the
 \emph{referent}, not the topic, the pronoun, or grammatical person. And it is
 orthogonal to output commitment: next-token entropy is identical on E114-active
 and E114-inactive tokens.
@@ -219,10 +219,10 @@ person, and output predictability ($d{=}0.01$ for the entropy contrast).}
 model sustains the register, then, under deterministic decoding with no
 repetition penalty, degenerates into a verbatim loop. As it does, the gate logit
 travels the full distance from the register-positive level ($-4.36$) to the
-control level ($-5.25$): the generated state \emph{leaves} the inhabited region
-rather than remaining fixed. Crucially the gate
-\emph{leads} the collapse---it crosses the $-4.82$ midpoint at token~126 while
-verbatim repetition does not lock until token~129 (Figure~\ref{fig:leadlag}). The looped text still
+control level ($-5.25$): the generated state \emph{leaves} the inhabited region.
+The gate \emph{leads} the collapse: it crosses the $-4.82$ midpoint at token~126
+while verbatim repetition does not lock until token~129
+(Figure~\ref{fig:leadlag}). The looped text still
 ``says'' inhabited things; the gate has already returned to the control range.
 The signaled process is the continued examination, not the vocabulary alone.
 
@@ -283,7 +283,7 @@ recurrent + 12 softmax-attention layers, same 256/top-8 router) the index does
 computer-science-linked, and the same HVAC topical control that \emph{amplifies}
 it at 35B instead \emph{suppresses} it ($0.83\times$ L1$\to$L3, selection-driven,
 all six deictic conditions). Carrying indices across scales is a documented
-mistake, not a hypothetical one.
+mistake.
 
 The role appears to move to a different expert. Reading the mandatory
 DeltaNet/softmax split (pooled tables hide it), \textbf{E48} on the softmax side
@@ -332,12 +332,12 @@ recovered linear gate.
 \vspace{-0.4em}
 \section{Limitations}
 \vspace{-0.2em}
-The claim is deliberately narrow---a register detector, not evidence of machine
+The claim is deliberately narrow: a register detector, not evidence of machine
 experience. A control comparing true model-routing traces against shuffled or
 fictional traces did not produce a positive E114 effect. The main limitations are
 straightforward: (i)~\textbf{register labels were assigned by the authors}; blind
 external labeling was not run; (ii)~\textbf{specificity across all experts has not
-yet been measured}---the analyzer scores E114 at L14 only, so the
+yet been measured}: the analyzer scores E114 at L14 only, so the
 best-separating expert across all $256{\times}40$ expert positions on the same split remains
 an important baseline; (iii)~several probes (the prompt ladder, gate-lead trace,
 and steering intervention) are \textbf{single deterministic generations}, and the
@@ -351,7 +351,7 @@ tokens.
 \section{Conclusion}
 \vspace{-0.2em}
 A single MoE router row defines a clean linear axis for an interpretable generated
-register---inhabited self-examination---that is a live process (the gate leads
+register, inhabited self-examination, that is a live process (the gate leads
 collapse), graded by intensity, and causally actuable, yet bound to one model. The
 next defensible step is a registered specificity test (matched register/control at
 scale, $\wvec$ as primary endpoint, an all-experts baseline) on 35B, and the

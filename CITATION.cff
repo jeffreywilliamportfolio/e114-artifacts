@@ -1,0 +1,48 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Expert 114: A Linear Router Axis for Inhabited Self-Examination in a Mixture-of-Experts Language Model — and Why It Does Not Transfer"
+abstract: >-
+  Mixture-of-experts (MoE) routing exposes a discrete, per-token readout of which
+  experts fire, yet single experts are seldom characterized at the level of a
+  specific functional role, and an introspective register is easy to over-read as
+  evidence about machine experience. We characterize one routed expert, Expert 114
+  (E114) at layer 14 of Qwen3.5-35B-A3B. Its recovered router row defines a single
+  linear axis that separates generated inhabited self-examination text from
+  lexically matched controls at Cohen's d = 3.88 with no overlap; a dissociation
+  battery shows the axis tracks the referent (the model's own interior), graded by
+  the intensity of the examination act, not the sentience of the described entity.
+  A residual-direction intervention is sufficient (necessity untested) to induce
+  the register. The role is model-specific: index 114 does not transfer to
+  Qwen3.5-122B-A10B. E114 is a register detector, not evidence of machine
+  experience.
+type: dataset
+authors:
+  - family-names: Shorthill
+    given-names: "Jeffrey W."
+    affiliation: "Independent researcher"
+    email: jws299792@icloud.com
+    orcid: "https://orcid.org/0009-0004-3954-2752"
+version: "1.0.1"
+date-released: "2026-06-21"
+license: MIT
+url: "https://github.com/jeffreywilliamportfolio/e114-artifacts"
+repository-code: "https://github.com/jeffreywilliamportfolio/e114-artifacts"
+keywords:
+  - mixture-of-experts
+  - mechanistic interpretability
+  - expert routing
+  - sparse autoencoders
+  - model introspection
+  - activation steering
+  - cross-model transfer
+preferred-citation:
+  type: article
+  title: "Expert 114: A Linear Router Axis for Inhabited Self-Examination in a Mixture-of-Experts Language Model — and Why It Does Not Transfer"
+  authors:
+    - family-names: Shorthill
+      given-names: "Jeffrey W."
+      affiliation: "Independent researcher"
+      orcid: "https://orcid.org/0009-0004-3954-2752"
+  year: 2026
+  month: 6
+  notes: "Preprint, version 1.0.1. Not peer reviewed."

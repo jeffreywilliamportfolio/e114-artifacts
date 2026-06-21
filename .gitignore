@@ -15,6 +15,11 @@
 *.log
 *.bak
 texput.log
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.synctex.gz
 
 # Python / env
 __pycache__/
