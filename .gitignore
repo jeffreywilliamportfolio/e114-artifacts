@@ -31,3 +31,6 @@ venv/
 .claude/
 .codex/
 tmp/
+
+# Claude Code local context (not part of the published artifact)
+CLAUDE.md
