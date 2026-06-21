@@ -1,8 +1,12 @@
 # E114 — Artifact Bundle
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20709736.svg)](https://doi.org/10.5281/zenodo.20709736)
+
 Durable artifacts for the paper *"Expert 114: A Linear Router Axis for Inhabited
 Self-Examination in a Mixture-of-Experts Language Model — and Why It Does Not
 Transfer."*
+
+**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest version, currently v1.0.1)
 
 This is the **paper-scoped** bundle: only the Qwen3.5-35B-A3B (and 122B transfer)
 runs behind the paper's claims. Legacy DeepSeek / Ling / GPT-OSS material is *not*
