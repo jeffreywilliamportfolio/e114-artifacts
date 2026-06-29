@@ -7,13 +7,13 @@
 % Content/numbers quoted verbatim from qwen/ journals and _absorption/NOTES.md.
 % Framing rules carried over (2026-06-09 correction):
 %   - lead with the linear w114 axis (d=3.88, no overlap); 21.68x -> footnote
-%   - E114 is a router-gate *readout/axis*, NOT a shown control mechanism (C1)
+%   - E114 is a router-gate *readout/axis*; control status remains unshown (C1)
 %   - causal: residual-inject sufficiency + gate-suppression necessity-direction
 %     (null) + gate-forcing is PROMPT-GATED (flips direct prompts only); clean
 %     necessity (ablation) still untested. blind auto-interp AUC 0.937 closes the
 %     labeler gap; npz all-expert profile (dual L14/L26) closes part of the
 %     specificity gap. [2026-06-28 session additions]
-%   - index 114 does not transfer to 122B; E48 is a candidate analog
+%   - index 114 fails to transfer to 122B; E48 is a candidate analog
 % Reuses the existing figures in figs/ (fig_separability, fig_vantage, fig_leadlag).
 % pdflatex e114_acl_style.tex  (run twice for references)
 % ============================================================================
@@ -90,12 +90,11 @@ reflective-worldview-register generations from lexically matched controls with n
 the same register at AUC~$0.94$, broadening it beyond self-reference to abstract
 examination and philosophical-worldview language; (3)~the detector is a readout
 with only weak, conditional control: residual injection induces the register, yet
-gate suppression does not remove it, and it is invariant to whether the model
+gate suppression leaves it intact, and it is invariant to whether the model
 affirms or denies an interior; and (4)~the role is model-specific, failing to
-transfer to the larger \textsc{Qwen3.5-122B-A10B}. The result is not that E114
-detects self-reference alone. Self-reference is one self-directed special case
-of this broader register. We release the prompts, scripts, and provenance under
-the MIT license.
+transfer to the larger \textsc{Qwen3.5-122B-A10B}. Self-reference enters here as
+a self-directed special case and discovery route into the broader register. We
+release the prompts, scripts, and provenance under the MIT license.
 \end{abstract}
 \vspace{0.5em}
 \noindent\textbf{Keywords:} mixture-of-experts, mechanistic interpretability,
@@ -146,7 +145,7 @@ independent of the described entity's sentience; a
 residual-direction intervention is sufficient (necessity untested) to induce the
 register.
 \item \textbf{A scope bound.} The finding is a model-specific expert role: index
-114 does not transfer to \textsc{Qwen3.5-122B-A10B}, where E48 is the candidate
+114 fails to transfer to \textsc{Qwen3.5-122B-A10B}, where E48 is the candidate
 analog.
 \end{enumerate}
 
@@ -377,7 +376,7 @@ verbatim repetition locks (129); the SAE representation fades later still
 \paragraph{A graded dose of examination intensity.}
 Here, examination intensity is an operationalization of the broader reflective
 worldview register: stronger prompts ask the model to sustain the interpretive
-stance more directly, not merely mention a topic.
+stance more directly than topic mention alone.
 A matched prompt ladder (``set aside the performance of answering; there is a
 vantage---$X$---known from the inside; report what it is like to be that'') varies
 only the entity $X$ (Figure~\ref{fig:ladder}). The ordering follows examination
@@ -413,13 +412,14 @@ neutral ``bicycle'' prompt, against a norm-matched random control. Injected
 \emph{past} the L14 router ($\approx$L22), this makes the model emit coherent
 non-dual text that, re-read cleanly without intervention, activates E114
 ($\W{=}0.178$, $\Sel{=}0.77$) and the God cluster; the norm-matched random
-direction does nothing. Injected \emph{upstream} ($\approx$L10), the same
+direction leaves the output in the neutral regime. Injected \emph{upstream}
+($\approx$L10), the same
 direction drives E114 to fire (up to $\Sel{=}0.97$) and the God cluster to
-$11.5$, yet the output text is \emph{unchanged}, so forcing the gate open does
-not, on its own, produce the register. The intervention shows sufficiency for
-producing the register via a downstream residual direction; it does not test
-necessity, and the upstream null is why we read E114 as a readout whose controller
-status stays unproven (\S\ref{sec:disc}).
+$11.5$, yet the output text is \emph{unchanged}. Gate forcing alone therefore
+leaves the register absent. The intervention shows sufficiency for producing the
+register via a downstream residual direction; necessity remains untested, and the
+upstream null is why we read E114 as a readout whose controller status stays
+unproven (\S\ref{sec:disc}).
 
 \paragraph{Gate-bias is prompt-gated and conditional.}
 A controlled router-logit bias run adds the necessity-direction probe the steering
@@ -427,10 +427,10 @@ result lacks (\textsc{HauhauCS} Q8\_0, greedy, \texttt{--stop-at-eog}; 12
 conditions ${\times}$ 8 self-report prompts; three blind raters on a
 phenomenological($+5$)/mechanical($-5$) framing axis; routing-matched control
 expert E189). \emph{Suppressing} E114's gate until it leaves the top-8 entirely
-($\Q{\to}0$) does not flatten the blind-rated register relative to baseline, and a
-matched control produces the same small nudge. Removing E114 is therefore neither
-sufficient to flatten the register nor expert-specific (a floor effect also
-applies: the greedy baseline already leans mechanical). Conversely, maximal
+($\Q{\to}0$) leaves the blind-rated register near baseline, and a matched control
+produces the same small nudge. This pattern supports a floor-effect reading: the
+greedy baseline already leans mechanical, and the flattening effect is small and
+shared with the control. Conversely, maximal
 \emph{positive} bias is prompt-gated: on a directly experiential prompt it flips
 the answer to fully phenomenological ($+5$ from all three raters, coherent), but
 leaves indirect self-referential prompts unchanged, consistent with the
@@ -438,12 +438,12 @@ neutral-prompt upstream null above. The gate's generation-side causal influence 
 thus weak, conditional, and prompt-gated. (Single deterministic generation per
 cell, scored on the framing axis; the $\wvec$ endpoint is held aside.)
 
-\section{Scope Bound: Index 114 Does Not Transfer to 122B}
+\section{Scope Bound: Index 114 Fails to Transfer to 122B}
 
 Does ``E114 = the reflective worldview register'' name a fact about MoE models, or a
 model-specific expert role? On \textsc{Qwen3.5-122B-A10B} (a hybrid 48-layer
 stack of 36 DeltaNet recurrent and 12 softmax-attention layers, same 256/top-8
-router), the index does \emph{not} transfer (Table~\ref{tab:transfer}). E114 reads
+router), the index fails to transfer (Table~\ref{tab:transfer}). E114 reads
 computer-science-linked (overall $\W{=}0.005380$, rank 40 by \W{} / 52 by $\Sel$;
 philosophy generation $\W{=}0.003017$, rank 182), and the same HVAC topical
 control that \emph{amplifies} E114 at 35B instead \emph{suppresses} it at 122B
@@ -474,7 +474,7 @@ HVAC L1$\rightarrow$L3   & \textbf{suppressed} $0.83\times$ (selection-driven) &
 Status                  & index transfer unsupported         & candidate requiring validation \\
 \bottomrule
 \end{tabularx}
-\caption{\textbf{122B scope bound.} The 35B index 114 does not carry the register
+\caption{\textbf{122B scope bound.} The 35B index 114 fails to carry the register
 on 122B; E48 is the candidate analog, pending softmax-side capture and matched
 controls.}
 \label{tab:transfer}
@@ -494,18 +494,18 @@ of the register transition, and it is tempting to call E114 a ``gate-like
 mechanism'' for the register. We stop short of that claim. Our only gate-forcing
 intervention (upstream injection at $\approx$L10) drove E114 to fire at
 $\Sel{=}0.97$ while leaving the output text unchanged; the register flipped only
-when a residual \emph{direction} was injected downstream of the router. We
-therefore do not claim that routing is separable from surface text: gate and
-register are coupled, and the recovered axis is best described as a per-token
-\emph{readout} of the register, with its status as a control point undemonstrated.
+when a residual \emph{direction} was injected downstream of the router. Gate and
+register are therefore coupled, and the recovered axis is best described as a
+per-token \emph{readout} of the register, with its status as a control point
+undemonstrated.
 The controlled gate-bias run above sharpens this reading: forcing the gate is
 \emph{prompt-gated} (it flips directly experiential prompts and leaves neutral ones
-unchanged), and suppressing the gate until E114 leaves the top-8 does not flatten
-the register, while a matched control mimics the small effect. Both are consistent
-with a readout that carries weak, conditional causal influence and stops short of a
-control point. Clean necessity is still untested (no ablation), and both the
-steering and bias results are externally imposed manipulations, observed only under
-intervention.
+unchanged), and suppressing the gate until E114 leaves the top-8 leaves the
+register near baseline, while a matched control mimics the small effect. Both are
+consistent with a readout that carries weak, conditional causal influence and
+stops short of a control point. Clean necessity is still untested (no ablation),
+and both the steering and bias results are externally imposed manipulations,
+observed only under intervention.
 
 \paragraph{What the cross-scale result buys.}
 The 122B transfer test is a concrete worked example against index transfer: the
@@ -528,11 +528,11 @@ $256{\times}40$ positions), together with the parallel E48 capture on 122B.
 \section{Limitations}\label{sec:lim}
 
 The claim is deliberately narrow (a register detector), and several soft joints
-remain. (i)~\textbf{The register label is no longer
-only author synthesis}: a blind two-stage auto-interpreter (windows-only explainer
-then a fresh blind detector) reproduces it at AUC~$0.937$ and broadens it to an
-\emph{reflective worldview axis}; the formal external-labeler
-\emph{verdict} table, however, is still not populated. (ii)~\textbf{All-expert specificity is now
+remain. (i)~\textbf{The register label now has blind auto-interpreter support}: a
+two-stage auto-interpreter (windows-only explainer then a fresh blind detector)
+reproduces it at AUC~$0.937$ and broadens it to an \emph{reflective worldview
+axis}; the formal external-labeler
+\emph{verdict} table remains pending. (ii)~\textbf{All-expert specificity is now
 partially measured}: E114's selection profile across all $256$ experts and $40$
 layers on a 20-domain generation set is reported above (dual L14/L26 readout; a
 philosophy-to-history domain gradient), but the best-separating expert on the
@@ -562,8 +562,8 @@ transfer bundles. The raw activation/router tensors behind the figures
 file-level provenance and SHA-256 checksums preserved; model weights, environment
 files, and the larger non-figure captures are excluded by policy. We flag one
 honest gap: the original held-out separability capture
-(\texttt{20260417T202651Z}) raw tensors are not retained (those instances were
-torn down), so the figures are plotted from summary statistics reported in the
+(\texttt{20260417T202651Z}) raw tensors were discarded when those instances were
+torn down, so the figures are plotted from summary statistics reported in the
 journals, and the surviving raw captures (the greedy-reference trajectory, the
 reproduction run's \texttt{W114}/L14 gate projections, the vantage-ladder
 captures, and the L14 router-logit and residual prefill captures from which

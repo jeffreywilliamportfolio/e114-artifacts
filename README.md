@@ -21,10 +21,12 @@ The paper and citation metadata identify the author as Jeffrey W. Shorthill, wit
 contact email `jws299792@icloud.com`.
 
 ## Sanitized sharing copy
-The direct v1.2.0 DOI,
+The refreshed standalone anonymous DOI,
+[`10.5281/zenodo.21042440`](https://doi.org/10.5281/zenodo.21042440), mirrors
+the v1.2.2 title and framing while using `Anonymous` in the paper and metadata
+and excluding the short manuscript. The older v1.2.0 sanitized DOI,
 [`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909), remains
-the sanitized copy for sharing with strangers: it uses `Anonymous` in the paper
-and metadata and excludes the short manuscript.
+available as a legacy direct version.
 
 ## Framing lineage from v1.2.0
 Version 1.2.0 moved the paper away from a self-referential-register label. This
@@ -65,7 +67,7 @@ journals/   primary-source experiment journals + the master synthesis (NOTES.md)
 runs/35b/   curated Qwen3.5-35B-A3B run results (tensor-free); includes the v1.1.0
             additions: 114-autointerp (bottom-up label) and
             114-causal-gate-bias (Phase-1 controlled causal test)
-runs/122b/  Qwen3.5-122B-A10B transfer runs (E114 does not transfer; E48)
+runs/122b/  Qwen3.5-122B-A10B transfer runs (E114 fails to transfer; E48)
 runs/sae/   SAE vantage-ladder run (durable provenance + analysis)
 staging/    E114 discovery bundle (probe/anchor CSVs, SAE feature map, plots)
 steering/   inference-time SAE feature-steering source + MANIFEST
@@ -86,12 +88,14 @@ steering/   inference-time SAE feature-steering source + MANIFEST
   `runs/35b/qwen3.5-35b-a3b-huahua-114-causal-gate-bias/METHOD/analyze_p1.py`.
 
 ## Citation
-Cite via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
-(resolves to the latest deposited version). Per-version DOIs: v1.2.2 =
+Cite the named release via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
+(resolves to the latest deposited named version). Per-version DOIs: v1.2.2 =
 [`10.5281/zenodo.21041914`](https://doi.org/10.5281/zenodo.21041914);
+v1.2.2 anonymous sharing copy =
+[`10.5281/zenodo.21042440`](https://doi.org/10.5281/zenodo.21042440);
 v1.2.1 =
 [`10.5281/zenodo.21041653`](https://doi.org/10.5281/zenodo.21041653);
-v1.2.0 sanitized copy =
+v1.2.0 legacy sanitized copy =
 [`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909);
 v1.1.0 = [`10.5281/zenodo.21015922`](https://doi.org/10.5281/zenodo.21015922);
 v1.0.1 = `10.5281/zenodo.20785773`. See `CITATION.cff` for the full record.

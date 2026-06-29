@@ -18,11 +18,11 @@ abstract: >-
   broadening it beyond self-reference to abstract examination and
   philosophical-worldview language; (3) the detector is a readout with only weak,
   conditional control: residual injection induces the register, yet gate
-  suppression does not remove it, and it is invariant to whether the model affirms
+  suppression leaves it intact, and it is invariant to whether the model affirms
   or denies an interior; and (4) the role is model-specific, failing to transfer to
-  the larger Qwen3.5-122B-A10B. The result is not that E114 detects self-reference
-  alone. Self-reference is one self-directed special case of this broader register.
-  We release the prompts, scripts, and provenance under the MIT license.
+  the larger Qwen3.5-122B-A10B. Self-reference enters here as a self-directed
+  special case and discovery route into the broader register. We release the
+  prompts, scripts, and provenance under the MIT license.
 type: dataset
 authors:
   - family-names: Shorthill
@@ -40,11 +40,14 @@ identifiers:
     value: "10.5281/zenodo.21041914"
     description: "Version 1.2.2 (current deposited version)"
   - type: doi
+    value: "10.5281/zenodo.21042440"
+    description: "Version 1.2.2 anonymous sharing copy"
+  - type: doi
     value: "10.5281/zenodo.21041653"
     description: "Version 1.2.1 (prior deposited version)"
   - type: doi
     value: "10.5281/zenodo.21040909"
-    description: "Version 1.2.0 (sanitized deposited version)"
+    description: "Version 1.2.0 (legacy sanitized deposited version)"
   - type: doi
     value: "10.5281/zenodo.21015922"
     description: "Version 1.1.0 (prior deposited version)"
