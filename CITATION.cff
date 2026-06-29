@@ -32,6 +32,9 @@ identifiers:
     value: "10.5281/zenodo.20709736"
     description: "Concept DOI (all versions; cite this)"
   - type: doi
+    value: "10.5281/zenodo.21015922"
+    description: "Version 1.1.0 (current deposited version)"
+  - type: doi
     value: "10.5281/zenodo.20785773"
     description: "Version 1.0.1 (prior deposited version)"
 url: "https://github.com/jeffreywilliamportfolio/e114-artifacts"

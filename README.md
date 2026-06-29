@@ -65,8 +65,9 @@ steering/   inference-time SAE feature-steering source + MANIFEST
 ## Citation
 Cite via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
 (resolves to the latest deposited version). Per-version DOIs: v1.0.1 =
-`10.5281/zenodo.20785773`; the v1.1.0 version DOI is minted by Zenodo from the
-GitHub release. See `CITATION.cff` for the full record.
+`10.5281/zenodo.20785773`; v1.1.0 =
+[`10.5281/zenodo.21015922`](https://doi.org/10.5281/zenodo.21015922). See
+`CITATION.cff` for the full record.
 
 ## License
 MIT (see `LICENSE`).
