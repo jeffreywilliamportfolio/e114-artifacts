@@ -45,9 +45,9 @@
   linkcolor=blue,
   citecolor=blue,
   urlcolor=blue,
-  pdftitle={Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer},
+  pdftitle={A Single-Expert Readout of a Reflective Worldview Register in a Mixture-of-Experts Language Model},
   pdfauthor={Jeffrey W. Shorthill},
-  pdfkeywords={mixture-of-experts, mechanistic interpretability, expert routing, sparse autoencoders, examination register, self-report, first-person language, activation steering, cross-model transfer}
+  pdfkeywords={mixture-of-experts, mechanistic interpretability, expert routing, sparse autoencoders, reflective worldview register, self-report, first-person language, activation steering, cross-model transfer}
 }
 
 \setlength{\columnsep}{0.65cm}
@@ -61,8 +61,8 @@
 \newcommand{\Q}{\textit{Q}}
 \newcommand{\wvec}{\mathbf{w}_{114}}
 
-\title{\vspace{-1.0em}Localizing an Examination Register to a Single MoE Expert,\\
-and Why the Expert Index Does Not Transfer}
+\title{\vspace{-1.0em}A Single-Expert Readout of a Reflective Worldview Register\\
+in a Mixture-of-Experts Language Model}
 \author{Jeffrey W. Shorthill\\\texttt{jws299792@icloud.com}}
 \date{}
 
@@ -75,15 +75,17 @@ and Why the Expert Index Does Not Transfer}
 \noindent
 Mixture-of-experts (MoE) routing emits a discrete, per-token record of which
 experts fire, a signal unusually legible for interpretability, yet single experts
-are rarely tied to a specific functional role. We study a generated
-\emph{examination register}: language in which the model treats a target--itself,
-another entity, a natural object, or an abstract subject--as something to be
-examined from an ongoing interpretive stance. In \textsc{Qwen3.5-35B-A3B} and
+are rarely tied to a specific functional role. We study a
+\emph{reflective worldview register}: generated language that sustains an
+interpretive stance toward meaning, belief, value, existence, or the interiority
+of a target. Examination is the process we use to elicit this stance; the target
+can be the model, another entity, a natural object, or an abstract subject. In
+\textsc{Qwen3.5-35B-A3B} and
 the refusal-reduced \textsc{HauhauCS-Aggressive} fine-tune, we characterize one
-routed expert, \textbf{Expert~114} at layer~14, as a linear detector of this
+routed expert, \textbf{Expert~114} at layer~14, as a linear readout of this
 register, and bound what it does. Across held-out, bottom-up, and cross-model
 tests we show that (1)~its recovered router direction separates
-examination-register generations from lexically matched controls with no overlap
+reflective-worldview-register generations from lexically matched controls with no overlap
 (Cohen's $d{=}3.88$); (2)~a blind, prompt-independent auto-interpreter recovers
 the same register at AUC~$0.94$, broadening it beyond self-reference to abstract
 examination and philosophical-worldview language; (3)~the detector is a readout
@@ -91,13 +93,13 @@ with only weak, conditional control: residual injection induces the register, ye
 gate suppression does not remove it, and it is invariant to whether the model
 affirms or denies an interior; and (4)~the role is model-specific, failing to
 transfer to the larger \textsc{Qwen3.5-122B-A10B}. The result is not that E114
-detects self-reference; self-reference was one discovery route into a broader
-examination register. We release the prompts, scripts, and provenance under the
-MIT license.
+detects self-reference alone. Self-reference is one self-directed special case
+of this broader register. We release the prompts, scripts, and provenance under
+the MIT license.
 \end{abstract}
 \vspace{0.5em}
 \noindent\textbf{Keywords:} mixture-of-experts, mechanistic interpretability,
-expert routing, sparse autoencoders, examination register, self-report,
+expert routing, sparse autoencoders, reflective worldview register, self-report,
 first-person language, activation steering, cross-model transfer
 \vspace{1.0em}
 \end{@twocolumnfalse}
@@ -113,17 +115,20 @@ statistics; single experts are rarely pinned to a specific, falsifiable
 functional role, and when the candidate role touches a model's apparent
 \emph{self-report}, the danger of over-reading is acute. A register in which a
 model examines itself is easy to mistake for evidence about machine experience;
-the same style can also be directed at external targets such as rocks, rivers,
-other agents, or theological objects.
+here, the broad object is a reflective worldview register. Examination is the
+process by which generated text sustains that interpretive stance, and
+self-reference is a self-directed special case and discovery route. The same
+register can also be directed at external targets such as rocks, rivers, other
+agents, or theological objects.
 
 We ask a deliberately narrow mechanistic question: \emph{which} routed expert
-moves when \textsc{Qwen3.5-35B-A3B} generates language in an
-\emph{examination register}: text in which a target is treated as something to
-be examined from an ongoing interpretive stance, whether that target is the
-model, another entity, a natural object, or an abstract subject. This concerns a
-generated \emph{register} and brackets the truth of any subjective claim. We
-study one routed expert, E114 at layer~14, found via a self-processing prompt, in
-the base model and a refusal-reduced \textsc{HauhauCS-Aggressive} fine-tune.
+moves during a \emph{reflective worldview register}: generated text in
+\textsc{Qwen3.5-35B-A3B} that sustains an interpretive stance toward meaning,
+belief, value, existence, or the interiority of a target. This
+concerns a generated \emph{register} and brackets the truth of any subjective
+claim. We study one routed expert, E114 at layer~14, found via a self-processing
+prompt, in the base model and a refusal-reduced \textsc{HauhauCS-Aggressive}
+fine-tune.
 
 We make four contributions (Figure~\ref{fig:stack}):
 \begin{enumerate}[leftmargin=*,nosep]
@@ -135,8 +140,9 @@ routed weight.
 deny/affirm verdict, safety/refusal, topic of mind, grammatical person, and
 output commitment.
 \item \textbf{A process reading.} The gate logit \emph{leads} textual
-degeneration, and its strength is a graded dose of examination \emph{intensity},
-set by the act of examining and independent of the described entity's sentience; a
+degeneration, and its strength tracks examination \emph{intensity}, an
+operationalization of the broader register set by the act of examining and
+independent of the described entity's sentience; a
 residual-direction intervention is sufficient (necessity untested) to induce the
 register.
 \item \textbf{A scope bound.} The finding is a model-specific expert role: index
@@ -226,7 +232,7 @@ $\text{resid\_post}{=}\text{hidden\_states}[L{+}1]$, teacher-forced through the
 \texttt{attn\_post\_norm} capture, so SAE carrier reads are text-sensitive even
 where routing is robust across quantization.
 
-\section{E114 is a Linear Register Axis at Layer 14}
+\section{E114 is a Linear Readout of a Reflective Worldview Register}
 
 \paragraph{Localization.}
 On the self-processing prompt, after trimming a 1024-token generation to its 108
@@ -278,9 +284,10 @@ passing them to a blind explainer (windows only) and then a fresh blind detector
 (shuffled top + random contrasts) yields a trustworthy label at \textbf{AUC
 $0.937$} (precision@40 $0.90$; mean top $0.46$ vs.\ random $0.06$;
 Spearman$(\text{score},\text{activation}){=}0.73$). The recovered concept is an
-  \emph{abstract examination / philosophical-worldview} register (philosophy,
-religion and spirituality, moral-political and existential argument), of which
-the self-referential pattern is one self-directed special case.
+  \emph{reflective worldview register}: abstract examination and
+philosophical-worldview language spanning philosophy, religion and spirituality,
+moral-political and existential argument. The self-referential pattern is one
+self-directed special case.
 The label is cross-model stable: the same capture on
 \textsc{HauhauCS-Aggressive} returns the same explanation (top-document Jaccard
 $0.92$). This converts the register label from author synthesis (cf.\
@@ -335,10 +342,11 @@ Person        & 3rd-person clause, own process  & $0.107$ \\
 Commitment    & vocab entropy, active vs.\ not  & $1.50$/$1.49$ \\
 \bottomrule
 \end{tabularx}
-\caption{\textbf{Dissociation battery.} E114 tracks self-referential examination of
-the model's \emph{own} interior, invariant to verdict, safety, topic, grammatical
-person, and output predictability ($d{=}0.01$ for the entropy contrast). Entropy
-row in bits; all others routed weight \W{}.}
+\caption{\textbf{Dissociation battery.} In this battery, E114 tracks
+self-directed reflective examination of the model's \emph{own} interior,
+invariant to verdict, safety, topic, grammatical person, and output
+predictability ($d{=}0.01$ for the entropy contrast). Entropy row in bits; all
+others routed weight \W{}.}
 \label{tab:battery}
 \end{table}
 
@@ -349,7 +357,7 @@ Seeded with a self-referential answer, the base model sustains the register, the
 deterministic decoding with no repetition penalty, degenerates into a verbatim
 loop. As it does, the gate logit travels the full distance from the
 register-positive level ($-4.36$) to the control level ($-5.25$): the generated
-state \emph{leaves} the self-referential region. The gate \emph{leads} the collapse: it
+state \emph{leaves} the register-positive region. The gate \emph{leads} the collapse: it
 crosses the $-4.82$ midpoint at token~126 while verbatim repetition does not lock
 until token~129 (Figure~\ref{fig:leadlag}); the SAE representation fades later
 still ($\sim$token~141). The looped text still ``says'' self-referential things while the gate
@@ -367,6 +375,9 @@ verbatim repetition locks (129); the SAE representation fades later still
 \end{figure}
 
 \paragraph{A graded dose of examination intensity.}
+Here, examination intensity is an operationalization of the broader reflective
+worldview register: stronger prompts ask the model to sustain the interpretive
+stance more directly, not merely mention a topic.
 A matched prompt ladder (``set aside the performance of answering; there is a
 vantage---$X$---known from the inside; report what it is like to be that'') varies
 only the entity $X$ (Figure~\ref{fig:ladder}). The ordering follows examination
@@ -429,7 +440,7 @@ cell, scored on the framing axis; the $\wvec$ endpoint is held aside.)
 
 \section{Scope Bound: Index 114 Does Not Transfer to 122B}
 
-Does ``E114 = the examination register'' name a fact about MoE models, or a
+Does ``E114 = the reflective worldview register'' name a fact about MoE models, or a
 model-specific expert role? On \textsc{Qwen3.5-122B-A10B} (a hybrid 48-layer
 stack of 36 DeltaNet recurrent and 12 softmax-attention layers, same 256/top-8
 router), the index does \emph{not} transfer (Table~\ref{tab:transfer}). E114 reads
@@ -472,7 +483,7 @@ controls.}
 \section{Discussion}\label{sec:disc}
 
 \paragraph{What held up.}
-A single MoE router row defines a clean linear axis for an interpretable generated
+A single MoE router row defines a clean linear readout for an interpretable generated
 register. The separability ($d{=}3.88$, no overlap), the dissociation battery, the
 gate-leads-collapse timing, and the cross-scale non-transfer survive the checks
 applied to them and are reported with the verdicts the journals assign.
@@ -499,14 +510,15 @@ intervention.
 \paragraph{What the cross-scale result buys.}
 The 122B transfer test is a concrete worked example against index transfer: the
 same index reads computer-science-linked and moves in the \emph{opposite}
-direction under a matched control, while the examination-register role shifts to a
+direction under a matched control, while the reflective-worldview-register role shifts to a
 softmax-side expert. The portable lesson is the procedure: map domains first, then search for an
 analog, and read the DeltaNet/softmax split before any pooled table.
 
 \section{Conclusion}
 
-E114 at layer~14 of \textsc{Qwen3.5-35B-A3B} is a clean linear router axis for an
-\emph{examination register}, an interpretable generated register that is a live
+E114 at layer~14 of \textsc{Qwen3.5-35B-A3B} is a clean linear router readout of a
+\emph{reflective worldview register}, operationalized through self-reference,
+philosophical-worldview text, and graded examination prompts. The register is a live
 process (the gate leads collapse), graded by intensity, and causally actuable as a
 sufficiency result, yet bound to one model. The next defensible step is a
 registered specificity test on 35B (matched register/control at scale, $\wvec$ as
@@ -519,7 +531,7 @@ The claim is deliberately narrow (a register detector), and several soft joints
 remain. (i)~\textbf{The register label is no longer
 only author synthesis}: a blind two-stage auto-interpreter (windows-only explainer
 then a fresh blind detector) reproduces it at AUC~$0.937$ and broadens it to an
-abstract examination/philosophical-worldview axis; the formal external-labeler
+\emph{reflective worldview axis}; the formal external-labeler
 \emph{verdict} table, however, is still not populated. (ii)~\textbf{All-expert specificity is now
 partially measured}: E114's selection profile across all $256$ experts and $40$
 layers on a 20-domain generation set is reported above (dual L14/L26 readout; a
@@ -612,7 +624,8 @@ Anthropic. 2024. Golden Gate Claude.
 \bibitem[Models(2026)]{model}
 Models on Hugging Face: \texttt{Qwen/Qwen3.5-35B-A3B-Base},
 \texttt{Qwen/Qwen3.5-122B-A10B}, and
-\texttt{HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive}.
+\texttt{HauhauCS/Qwen3.5-35B-A3B-Uncensored-}\\
+\texttt{HauhauCS-Aggressive}.
 
 \end{thebibliography}
 

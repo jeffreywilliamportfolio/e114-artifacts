@@ -2,17 +2,21 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20709736.svg)](https://doi.org/10.5281/zenodo.20709736)
 
-Durable artifacts for the paper *"Localizing an Examination Register to a Single
-MoE Expert, and Why the Expert Index Does Not Transfer."*
+Durable artifacts for the paper *"A Single-Expert Readout of a Reflective
+Worldview Register in a Mixture-of-Experts Language Model."*
 
-**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.2.1**; the prior deposited version is v1.2.0.
+**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.2.2**; the prior deposited version is v1.2.1.
 
 This is the **paper-scoped** bundle: only the Qwen3.5-35B-A3B (and 122B transfer)
 runs behind the paper's claims. Legacy DeepSeek / Ling / GPT-OSS material is *not*
 included.
 
-## What's new in v1.2.1
-This is the named official Zenodo release of the examination-register framing.
+## What's new in v1.2.2
+This release updates the paper title to **"A Single-Expert Readout of a
+Reflective Worldview Register in a Mixture-of-Experts Language Model."** It keeps
+the named official Zenodo metadata.
+
+## Named release from v1.2.1
 The paper and citation metadata identify the author as Jeffrey W. Shorthill, with
 contact email `jws299792@icloud.com`.
 
@@ -22,10 +26,11 @@ The direct v1.2.0 DOI,
 the sanitized copy for sharing with strangers: it uses `Anonymous` in the paper
 and metadata and excludes the short manuscript.
 
-## Framing update from v1.2.0
-This release reframes the paper around an **examination register** rather than a
-self-referential register: self-reference is treated as one discovery route into
-a broader object-directed examination style.
+## Framing lineage from v1.2.0
+Version 1.2.0 moved the paper away from a self-referential-register label. This
+release names the broader target a **reflective worldview register**:
+self-reference is one self-directed special case of a stance toward meaning,
+belief, value, existence, or a target's interiority.
 
 ## Technical additions from v1.1.0
 Three results were added to the paper and the bundle in v1.1.0 (the
@@ -33,8 +38,9 @@ v1.0.0/1.0.1 claims are unchanged; these strengthen two of the paper's own
 acknowledged gaps):
 - **Bottom-up auto-interp** (`runs/35b/qwen3.5-35b-a3b-114-autointerp/`) — a blind
   two-stage labeler reproduces E114's register at AUC 0.937 and broadens it to an
-  abstract examination/philosophical-worldview axis; cross-model Jaccard 0.92. Closes
-  the "labels were author-assigned" gap.
+  reflective worldview axis, with abstract examination/philosophical-worldview
+  language as supporting description; cross-model Jaccard 0.92. Closes the "labels
+  were author-assigned" gap.
 - **All-expert npz profile** (`runs/35b/qwen3.5-35b-a3b-huahua-expert-identification/DOCS/RESULTS_e114_npz_characterization.md`)
   — E114's dual L14/L26 readout (same axis, r = +0.99) and 20-domain selectivity
   across all 256 experts; the prior four-expert "philosophy cluster" is not a
@@ -81,7 +87,9 @@ steering/   inference-time SAE feature-steering source + MANIFEST
 
 ## Citation
 Cite via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
-(resolves to the latest deposited version). Per-version DOIs: v1.2.1 =
+(resolves to the latest deposited version). Per-version DOIs: v1.2.2 =
+[`10.5281/zenodo.21041914`](https://doi.org/10.5281/zenodo.21041914);
+v1.2.1 =
 [`10.5281/zenodo.21041653`](https://doi.org/10.5281/zenodo.21041653);
 v1.2.0 sanitized copy =
 [`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909);

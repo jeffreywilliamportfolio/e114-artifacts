@@ -1,17 +1,18 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer"
+title: "A Single-Expert Readout of a Reflective Worldview Register in a Mixture-of-Experts Language Model"
 abstract: >-
   Mixture-of-experts (MoE) routing emits a discrete, per-token record of which
   experts fire, a signal unusually legible for interpretability, yet single experts
-  are rarely tied to a specific functional role. We study a generated examination
-  register: language in which the model treats a target -- itself, another entity,
-  a natural object, or an abstract subject -- as something to be examined from an
-  ongoing interpretive stance. In Qwen3.5-35B-A3B and the refusal-reduced
+  are rarely tied to a specific functional role. We study a reflective worldview
+  register: generated language that sustains an interpretive stance toward meaning,
+  belief, value, existence, or the interiority of a target. Examination is the
+  process we use to elicit this stance; the target can be the model, another
+  entity, a natural object, or an abstract subject. In Qwen3.5-35B-A3B and the refusal-reduced
   HauhauCS-Aggressive fine-tune, we characterize one routed expert, Expert 114 at
-  layer 14, as a linear detector of this register, and bound what it does. Across
+  layer 14, as a linear readout of this register, and bound what it does. Across
   held-out, bottom-up, and cross-model tests we show that (1) its recovered router
-  direction separates examination-register generations
+  direction separates reflective-worldview-register generations
   from lexically matched controls with no overlap (Cohen's d = 3.88); (2) a blind,
   prompt-independent auto-interpreter recovers the same register at AUC 0.94,
   broadening it beyond self-reference to abstract examination and
@@ -19,16 +20,16 @@ abstract: >-
   conditional control: residual injection induces the register, yet gate
   suppression does not remove it, and it is invariant to whether the model affirms
   or denies an interior; and (4) the role is model-specific, failing to transfer to
-  the larger Qwen3.5-122B-A10B. The result is not that E114 detects self-reference;
-  self-reference was one discovery route into a broader examination register. We
-  release the prompts, scripts, and provenance under the MIT license.
+  the larger Qwen3.5-122B-A10B. The result is not that E114 detects self-reference
+  alone. Self-reference is one self-directed special case of this broader register.
+  We release the prompts, scripts, and provenance under the MIT license.
 type: dataset
 authors:
   - family-names: Shorthill
     given-names: "Jeffrey W."
     affiliation: "Independent researcher"
     email: jws299792@icloud.com
-version: "1.2.1"
+version: "1.2.2"
 date-released: "2026-06-29"
 license: MIT
 identifiers:
@@ -36,8 +37,11 @@ identifiers:
     value: "10.5281/zenodo.20709736"
     description: "Concept DOI (all versions; cite this)"
   - type: doi
+    value: "10.5281/zenodo.21041914"
+    description: "Version 1.2.2 (current deposited version)"
+  - type: doi
     value: "10.5281/zenodo.21041653"
-    description: "Version 1.2.1 (current deposited version)"
+    description: "Version 1.2.1 (prior deposited version)"
   - type: doi
     value: "10.5281/zenodo.21040909"
     description: "Version 1.2.0 (sanitized deposited version)"
@@ -53,14 +57,14 @@ keywords:
   - mechanistic interpretability
   - expert routing
   - sparse autoencoders
-  - examination register
+  - reflective worldview register
   - self-report
   - first-person language
   - activation steering
   - cross-model transfer
 preferred-citation:
   type: article
-  title: "Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer"
+  title: "A Single-Expert Readout of a Reflective Worldview Register in a Mixture-of-Experts Language Model"
   authors:
     - family-names: Shorthill
       given-names: "Jeffrey W."
@@ -68,4 +72,4 @@ preferred-citation:
   year: 2026
   month: 6
   doi: "10.5281/zenodo.20709736"
-  notes: "Preprint, version 1.2.1. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
+  notes: "Preprint, version 1.2.2. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
