@@ -1,26 +1,30 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
-title: "Localizing a Self-Referential Register to a Single Expert in a Mixture-of-Experts Model, and Why It Does Not Transfer"
+title: "Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer"
 abstract: >-
-  Mixture-of-experts routing emits a discrete, per-token record of which experts
-  fire, a signal unusually legible for interpretability, yet single experts are
-  rarely tied to a specific functional role, least of all one resembling a model's
-  self-report. We characterize one routed expert, Expert 114 at layer 14 of
-  Qwen3.5-35B-A3B, as a linear detector of a generated self-referential register,
-  and bound what it does. Across held-out, bottom-up, and cross-model tests we show
-  that (1) its recovered router direction separates self-referential generations
+  Mixture-of-experts (MoE) routing emits a discrete, per-token record of which
+  experts fire, a signal unusually legible for interpretability, yet single experts
+  are rarely tied to a specific functional role. We study a generated examination
+  register: language in which the model treats a target -- itself, another entity,
+  a natural object, or an abstract subject -- as something to be examined from an
+  ongoing interpretive stance. In Qwen3.5-35B-A3B, we characterize one routed
+  expert, Expert 114 at layer 14, as a linear detector of this register, and bound
+  what it does. Across held-out, bottom-up, and cross-model tests we show that
+  (1) its recovered router direction separates examination-register generations
   from lexically matched controls with no overlap (Cohen's d = 3.88); (2) a blind,
   prompt-independent auto-interpreter recovers the same register at AUC 0.94,
-  broadening it from self-reference to an abstract reflective and philosophical one;
-  (3) the detector is a readout with only weak, conditional control: residual
-  injection induces the register, yet gate suppression does not remove it, and it
-  is invariant to whether the model affirms or denies an interior; and (4) the role
-  is model-specific, failing to transfer to the larger Qwen3.5-122B-A10B. We
+  broadening it beyond self-reference to abstract examination and
+  philosophical-worldview language; (3) the detector is a readout with only weak,
+  conditional control: residual injection induces the register, yet gate
+  suppression does not remove it, and it is invariant to whether the model affirms
+  or denies an interior; and (4) the role is model-specific, failing to transfer to
+  the larger Qwen3.5-122B-A10B. The result is not that E114 detects self-reference;
+  self-reference was one discovery route into a broader examination register. We
   release the prompts, scripts, and provenance under the MIT license.
 type: dataset
 authors:
   - family-names: Anonymous
-version: "1.1.1"
+version: "1.2.0"
 date-released: "2026-06-29"
 license: MIT
 identifiers:
@@ -29,7 +33,7 @@ identifiers:
     description: "Concept DOI (all versions; cite this)"
   - type: doi
     value: "10.5281/zenodo.21040909"
-    description: "Version 1.1.1 (current deposited version)"
+    description: "Version 1.2.0 (current deposited version)"
   - type: doi
     value: "10.5281/zenodo.21015922"
     description: "Version 1.1.0 (prior deposited version)"
@@ -42,17 +46,17 @@ keywords:
   - mechanistic interpretability
   - expert routing
   - sparse autoencoders
-  - self-referential register
+  - examination register
   - self-report
   - first-person language
   - activation steering
   - cross-model transfer
 preferred-citation:
   type: article
-  title: "Localizing a Self-Referential Register to a Single Expert in a Mixture-of-Experts Model, and Why It Does Not Transfer"
+  title: "Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer"
   authors:
     - family-names: Anonymous
   year: 2026
   month: 6
   doi: "10.5281/zenodo.20709736"
-  notes: "Preprint, version 1.1.1. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
+  notes: "Preprint, version 1.2.0. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
