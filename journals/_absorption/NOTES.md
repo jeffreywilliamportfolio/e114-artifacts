@@ -4,7 +4,7 @@ Running intake notes. Facts as sources state them; opinions parked under Flags.
 
 ---
 
-## CORRECTION (2026-06-09, from Jeffrey — supersedes emphasis in entries below)
+## CORRECTION (2026-06-09, from the author - supersedes emphasis in entries below)
 
 The E114 validation should NOT lead with the 21.68× / 20.955× FIRE/NOFIRE realized-W ratio (Cohen's d 2.61–2.94, with token-level overlap). Entry 4 of JOURNAL-E114-CHARACTERIZATION retired that as the load-bearing statistic. **The discriminative signal is the single linear projection onto the recovered router row `w114`: Cohen's d 3.88, no overlap** — sharper than realized W. The 21.7× is top-k ratio-inflation (zeroing nofires amplifies a gap the linear gate already separates more cleanly). `w114` recovers for free by least-squares from any (residual, logit) capture (residual 1.5e-5). Paper headline = the linear axis; the ratio becomes a footnote explaining why the naive number overstates.
 
@@ -12,7 +12,7 @@ Two scope-critical results to keep adjacent to any E114 claim:
 1. **122B scope bound / index-transfer fallacy:** index 114 on Qwen3.5-122B-A10B reads computer-science-linked and is suppressed L1→L3 in the HVAC control (opposite direction, all six deictic conditions, selection-driven); the inhabited-register role moved to E48 (softmax side). "E114 = live inhabited self-examination" is a **35B slot**, not a finding about MoE models generally.
 2. **Gate-leads-degeneration + vantage ladder** = the coherent positive claim: gate logit crosses −4.82 midpoint at token 126, verbatim repetition locks at 129 (gate cold ~3 tokens before looped still-inhabited-sounding text collapses); rock/thermostat outrank cat on the ladder. The axis measures the **live act of examination, graded by intensity, blind to deny/affirm polarity, dying only on degeneration**.
 
-Jeffrey is updating the journals; entries below retain the sources' original emphasis as absorbed.
+The author is updating the journals; entries below retain the sources' original emphasis as absorbed.
 
 ---
 

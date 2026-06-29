@@ -5,15 +5,22 @@
 Durable artifacts for the paper *"Localizing a Self-Referential Register to a
 Single Expert in a Mixture-of-Experts Model, and Why It Does Not Transfer."*
 
-**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.1.0**; the prior deposited version is v1.0.1.
+**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.1.1**; the prior deposited version is v1.1.0.
 
 This is the **paper-scoped** bundle: only the Qwen3.5-35B-A3B (and 122B transfer)
 runs behind the paper's claims. Legacy DeepSeek / Ling / GPT-OSS material is *not*
 included.
 
-## What's new in v1.1.0
-Three results added to the paper and the bundle (the v1.0.0/1.0.1 claims are
-unchanged; these strengthen two of the paper's own acknowledged gaps):
+## What's new in v1.1.1
+This is a sanitized release of the v1.1.0 technical content. It removes personal
+author name, email, ORCID, local filesystem username, and owner-specific
+repository links from the public metadata and paper; the short manuscript remains
+excluded.
+
+## Technical additions from v1.1.0
+Three results were added to the paper and the bundle in v1.1.0 (the
+v1.0.0/1.0.1 claims are unchanged; these strengthen two of the paper's own
+acknowledged gaps):
 - **Bottom-up auto-interp** (`runs/35b/qwen3.5-35b-a3b-114-autointerp/`) — a blind
   two-stage labeler reproduces E114's register at AUC 0.937 and broadens it to an
   abstract reflective/philosophical-worldview axis; cross-model Jaccard 0.92. Closes
@@ -64,10 +71,10 @@ steering/   inference-time SAE feature-steering source + MANIFEST
 
 ## Citation
 Cite via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
-(resolves to the latest deposited version). Per-version DOIs: v1.0.1 =
-`10.5281/zenodo.20785773`; v1.1.0 =
-[`10.5281/zenodo.21015922`](https://doi.org/10.5281/zenodo.21015922). See
-`CITATION.cff` for the full record.
+(resolves to the latest deposited version). Per-version DOIs: v1.1.1 =
+[`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909);
+v1.1.0 = [`10.5281/zenodo.21015922`](https://doi.org/10.5281/zenodo.21015922);
+v1.0.1 = `10.5281/zenodo.20785773`. See `CITATION.cff` for the full record.
 
 ## License
 MIT (see `LICENSE`).

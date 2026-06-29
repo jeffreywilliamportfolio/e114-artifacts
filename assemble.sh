@@ -7,9 +7,9 @@ set -euo pipefail
 
 DEST="/Volumes/ExternalSSD/e114-artifacts"
 JRN="/Volumes/ExternalSSD/journals"
-CENT="/Users/jeffreyshorthill/moe-routing-centralize-20260418/qwen"
+CENT="${CENT:-/path/to/moe-routing-centralize-20260418/qwen}"
 SAE="/Volumes/ExternalSSD/sae-tests/runs"
-HELD_CLEAN="/Users/jeffreyshorthill/moe-routing-35b-source-20260418/qwen3.5-35b-a3b-huahua-114-selfref-heldout"
+HELD_CLEAN="${HELD_CLEAN:-/path/to/moe-routing-35b-source-20260418/qwen3.5-35b-a3b-huahua-114-selfref-heldout}"
 
 # rsync flags: archive, exclude tensors / vcs / junk
 RS=(rsync -a --prune-empty-dirs

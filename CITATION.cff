@@ -19,26 +19,24 @@ abstract: >-
   release the prompts, scripts, and provenance under the MIT license.
 type: dataset
 authors:
-  - family-names: Shorthill
-    given-names: "Jeffrey W."
-    affiliation: "Independent researcher"
-    email: jws299792@icloud.com
-    orcid: "https://orcid.org/0009-0004-3954-2752"
-version: "1.1.0"
-date-released: "2026-06-28"
+  - family-names: Anonymous
+version: "1.1.1"
+date-released: "2026-06-29"
 license: MIT
 identifiers:
   - type: doi
     value: "10.5281/zenodo.20709736"
     description: "Concept DOI (all versions; cite this)"
   - type: doi
+    value: "10.5281/zenodo.21040909"
+    description: "Version 1.1.1 (current deposited version)"
+  - type: doi
     value: "10.5281/zenodo.21015922"
-    description: "Version 1.1.0 (current deposited version)"
+    description: "Version 1.1.0 (prior deposited version)"
   - type: doi
     value: "10.5281/zenodo.20785773"
     description: "Version 1.0.1 (prior deposited version)"
-url: "https://github.com/jeffreywilliamportfolio/e114-artifacts"
-repository-code: "https://github.com/jeffreywilliamportfolio/e114-artifacts"
+url: "https://doi.org/10.5281/zenodo.20709736"
 keywords:
   - mixture-of-experts
   - mechanistic interpretability
@@ -53,11 +51,8 @@ preferred-citation:
   type: article
   title: "Localizing a Self-Referential Register to a Single Expert in a Mixture-of-Experts Model, and Why It Does Not Transfer"
   authors:
-    - family-names: Shorthill
-      given-names: "Jeffrey W."
-      affiliation: "Independent researcher"
-      orcid: "https://orcid.org/0009-0004-3954-2752"
+    - family-names: Anonymous
   year: 2026
   month: 6
   doi: "10.5281/zenodo.20709736"
-  notes: "Preprint, version 1.1.0. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
+  notes: "Preprint, version 1.1.1. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
