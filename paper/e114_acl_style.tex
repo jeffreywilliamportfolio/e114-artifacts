@@ -46,7 +46,7 @@
   citecolor=blue,
   urlcolor=blue,
   pdftitle={Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer},
-  pdfauthor={Anonymous},
+  pdfauthor={Jeffrey W. Shorthill},
   pdfkeywords={mixture-of-experts, mechanistic interpretability, expert routing, sparse autoencoders, examination register, self-report, first-person language, activation steering, cross-model transfer}
 }
 
@@ -63,7 +63,7 @@
 
 \title{\vspace{-1.0em}Localizing an Examination Register to a Single MoE Expert,\\
 and Why the Expert Index Does Not Transfer}
-\author{Anonymous}
+\author{Jeffrey W. Shorthill\\\texttt{jws299792@icloud.com}}
 \date{}
 
 \begin{document}
@@ -78,10 +78,11 @@ experts fire, a signal unusually legible for interpretability, yet single expert
 are rarely tied to a specific functional role. We study a generated
 \emph{examination register}: language in which the model treats a target--itself,
 another entity, a natural object, or an abstract subject--as something to be
-examined from an ongoing interpretive stance. In \textsc{Qwen3.5-35B-A3B}, we
-characterize one routed expert, \textbf{Expert~114} at layer~14, as a linear
-detector of this register, and bound what it does. Across held-out, bottom-up, and
-cross-model tests we show that (1)~its recovered router direction separates
+examined from an ongoing interpretive stance. In \textsc{Qwen3.5-35B-A3B} and
+the refusal-reduced \textsc{HauhauCS-Aggressive} fine-tune, we characterize one
+routed expert, \textbf{Expert~114} at layer~14, as a linear detector of this
+register, and bound what it does. Across held-out, bottom-up, and cross-model
+tests we show that (1)~its recovered router direction separates
 examination-register generations from lexically matched controls with no overlap
 (Cohen's $d{=}3.88$); (2)~a blind, prompt-independent auto-interpreter recovers
 the same register at AUC~$0.94$, broadening it beyond self-reference to abstract

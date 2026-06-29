@@ -7,10 +7,11 @@ abstract: >-
   are rarely tied to a specific functional role. We study a generated examination
   register: language in which the model treats a target -- itself, another entity,
   a natural object, or an abstract subject -- as something to be examined from an
-  ongoing interpretive stance. In Qwen3.5-35B-A3B, we characterize one routed
-  expert, Expert 114 at layer 14, as a linear detector of this register, and bound
-  what it does. Across held-out, bottom-up, and cross-model tests we show that
-  (1) its recovered router direction separates examination-register generations
+  ongoing interpretive stance. In Qwen3.5-35B-A3B and the refusal-reduced
+  HauhauCS-Aggressive fine-tune, we characterize one routed expert, Expert 114 at
+  layer 14, as a linear detector of this register, and bound what it does. Across
+  held-out, bottom-up, and cross-model tests we show that (1) its recovered router
+  direction separates examination-register generations
   from lexically matched controls with no overlap (Cohen's d = 3.88); (2) a blind,
   prompt-independent auto-interpreter recovers the same register at AUC 0.94,
   broadening it beyond self-reference to abstract examination and
@@ -23,8 +24,11 @@ abstract: >-
   release the prompts, scripts, and provenance under the MIT license.
 type: dataset
 authors:
-  - family-names: Anonymous
-version: "1.2.0"
+  - family-names: Shorthill
+    given-names: "Jeffrey W."
+    affiliation: "Independent researcher"
+    email: jws299792@icloud.com
+version: "1.2.1"
 date-released: "2026-06-29"
 license: MIT
 identifiers:
@@ -32,8 +36,11 @@ identifiers:
     value: "10.5281/zenodo.20709736"
     description: "Concept DOI (all versions; cite this)"
   - type: doi
+    value: "10.5281/zenodo.21041653"
+    description: "Version 1.2.1 (current deposited version)"
+  - type: doi
     value: "10.5281/zenodo.21040909"
-    description: "Version 1.2.0 (current deposited version)"
+    description: "Version 1.2.0 (sanitized deposited version)"
   - type: doi
     value: "10.5281/zenodo.21015922"
     description: "Version 1.1.0 (prior deposited version)"
@@ -55,8 +62,10 @@ preferred-citation:
   type: article
   title: "Localizing an Examination Register to a Single MoE Expert, and Why the Expert Index Does Not Transfer"
   authors:
-    - family-names: Anonymous
+    - family-names: Shorthill
+      given-names: "Jeffrey W."
+      affiliation: "Independent researcher"
   year: 2026
   month: 6
   doi: "10.5281/zenodo.20709736"
-  notes: "Preprint, version 1.2.0. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
+  notes: "Preprint, version 1.2.1. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."

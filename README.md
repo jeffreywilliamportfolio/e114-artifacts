@@ -5,19 +5,27 @@
 Durable artifacts for the paper *"Localizing an Examination Register to a Single
 MoE Expert, and Why the Expert Index Does Not Transfer."*
 
-**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.2.0**; the prior deposited version is v1.1.0.
+**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.2.1**; the prior deposited version is v1.2.0.
 
 This is the **paper-scoped** bundle: only the Qwen3.5-35B-A3B (and 122B transfer)
 runs behind the paper's claims. Legacy DeepSeek / Ling / GPT-OSS material is *not*
 included.
 
-## What's new in v1.2.0
+## What's new in v1.2.1
+This is the named official Zenodo release of the examination-register framing.
+The paper and citation metadata identify the author as Jeffrey W. Shorthill, with
+contact email `jws299792@icloud.com`.
+
+## Sanitized sharing copy
+The direct v1.2.0 DOI,
+[`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909), remains
+the sanitized copy for sharing with strangers: it uses `Anonymous` in the paper
+and metadata and excludes the short manuscript.
+
+## Framing update from v1.2.0
 This release reframes the paper around an **examination register** rather than a
 self-referential register: self-reference is treated as one discovery route into
-a broader object-directed examination style. It also keeps the sanitized public
-metadata: no personal author name, email, ORCID, local filesystem username, or
-owner-specific repository links in the public paper/metadata; the short
-manuscript remains excluded.
+a broader object-directed examination style.
 
 ## Technical additions from v1.1.0
 Three results were added to the paper and the bundle in v1.1.0 (the
@@ -73,7 +81,9 @@ steering/   inference-time SAE feature-steering source + MANIFEST
 
 ## Citation
 Cite via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
-(resolves to the latest deposited version). Per-version DOIs: v1.2.0 =
+(resolves to the latest deposited version). Per-version DOIs: v1.2.1 =
+[`10.5281/zenodo.21041653`](https://doi.org/10.5281/zenodo.21041653);
+v1.2.0 sanitized copy =
 [`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909);
 v1.1.0 = [`10.5281/zenodo.21015922`](https://doi.org/10.5281/zenodo.21015922);
 v1.0.1 = `10.5281/zenodo.20785773`. See `CITATION.cff` for the full record.
