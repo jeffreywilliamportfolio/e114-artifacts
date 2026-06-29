@@ -29,7 +29,7 @@ authors:
     given-names: "Jeffrey W."
     affiliation: "Independent researcher"
     email: jws299792@icloud.com
-version: "1.2.2"
+version: "1.2.3"
 date-released: "2026-06-29"
 license: MIT
 identifiers:
@@ -37,8 +37,14 @@ identifiers:
     value: "10.5281/zenodo.20709736"
     description: "Concept DOI (all versions; cite this)"
   - type: doi
+    value: "10.5281/zenodo.21042937"
+    description: "Version 1.2.3 (current deposited version)"
+  - type: doi
+    value: "10.5281/zenodo.21042938"
+    description: "Version 1.2.3 anonymous sharing copy"
+  - type: doi
     value: "10.5281/zenodo.21041914"
-    description: "Version 1.2.2 (current deposited version)"
+    description: "Version 1.2.2 (prior deposited version)"
   - type: doi
     value: "10.5281/zenodo.21042440"
     description: "Version 1.2.2 anonymous sharing copy"
@@ -75,4 +81,4 @@ preferred-citation:
   year: 2026
   month: 6
   doi: "10.5281/zenodo.20709736"
-  notes: "Preprint, version 1.2.2. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."
+  notes: "Preprint, version 1.2.3. Cite via the concept DOI, which resolves to the latest deposited version. Not peer reviewed."

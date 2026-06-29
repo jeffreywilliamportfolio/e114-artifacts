@@ -5,16 +5,16 @@
 Durable artifacts for the paper *"A Single-Expert Readout of a Reflective
 Worldview Register in a Mixture-of-Experts Language Model."*
 
-**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.2.2**; the prior deposited version is v1.2.1.
+**DOI:** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736) (concept DOI — resolves to the latest deposited version). This release is **v1.2.3**; the prior deposited version is v1.2.2.
 
 This is the **paper-scoped** bundle: only the Qwen3.5-35B-A3B (and 122B transfer)
 runs behind the paper's claims. Legacy DeepSeek / Ling / GPT-OSS material is *not*
 included.
 
-## What's new in v1.2.2
-This release updates the paper title to **"A Single-Expert Readout of a
-Reflective Worldview Register in a Mixture-of-Experts Language Model."** It keeps
-the named official Zenodo metadata.
+## What's new in v1.2.3
+This release removes contrastive "not X, Y" prose from the abstract and related
+paper framing while preserving the v1.2.2 title and named official Zenodo
+metadata.
 
 ## Named release from v1.2.1
 The paper and citation metadata identify the author as Jeffrey W. Shorthill, with
@@ -22,11 +22,12 @@ contact email `jws299792@icloud.com`.
 
 ## Sanitized sharing copy
 The refreshed standalone anonymous DOI,
-[`10.5281/zenodo.21042440`](https://doi.org/10.5281/zenodo.21042440), mirrors
-the v1.2.2 title and framing while using `Anonymous` in the paper and metadata
-and excluding the short manuscript. The older v1.2.0 sanitized DOI,
+[`10.5281/zenodo.21042938`](https://doi.org/10.5281/zenodo.21042938), mirrors
+the v1.2.3 title and framing while using `Anonymous` in the paper and metadata
+and excluding the short manuscript. The v1.2.2 anonymous DOI,
+[`10.5281/zenodo.21042440`](https://doi.org/10.5281/zenodo.21042440), and the older v1.2.0 sanitized DOI,
 [`10.5281/zenodo.21040909`](https://doi.org/10.5281/zenodo.21040909), remains
-available as a legacy direct version.
+available as legacy direct versions.
 
 ## Framing lineage from v1.2.0
 Version 1.2.0 moved the paper away from a self-referential-register label. This
@@ -89,7 +90,11 @@ steering/   inference-time SAE feature-steering source + MANIFEST
 
 ## Citation
 Cite the named release via the **concept DOI** [10.5281/zenodo.20709736](https://doi.org/10.5281/zenodo.20709736)
-(resolves to the latest deposited named version). Per-version DOIs: v1.2.2 =
+(resolves to the latest deposited named version). Per-version DOIs: v1.2.3 =
+[`10.5281/zenodo.21042937`](https://doi.org/10.5281/zenodo.21042937);
+v1.2.3 anonymous sharing copy =
+[`10.5281/zenodo.21042938`](https://doi.org/10.5281/zenodo.21042938);
+v1.2.2 =
 [`10.5281/zenodo.21041914`](https://doi.org/10.5281/zenodo.21041914);
 v1.2.2 anonymous sharing copy =
 [`10.5281/zenodo.21042440`](https://doi.org/10.5281/zenodo.21042440);
