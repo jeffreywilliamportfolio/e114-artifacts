@@ -1,0 +1,60 @@
+Photosynthesis is the biological process by which plants, algae, and some bacteria convert light energy into chemical energy stored in glucose. It occurs primarily in the **chloroplasts** of plant cells, specifically within structures called **thylakoids** and the surrounding **stroma**.
+
+The process is divided into two main stages: the **Light-Dependent Reactions** and the **Calvin Cycle** (Light-Independent Reactions).
+
+### 1. The Light-Dependent Reactions
+**Location:** Thylakoid membranes of the chloroplast.
+**Goal:** To capture solar energy and convert it into chemical energy carriers (ATP and NADPH) while releasing oxygen as a byproduct.
+
+*   **Photon Absorption:** Chlorophyll and other pigments in the thylakoid membranes absorb sunlight. This energy excites electrons to a higher energy state.
+*   **Water Splitting (Photolysis):** To replace the lost electrons in chlorophyll, an enzyme splits water molecules ($H_2O$). This releases:
+    *   **Oxygen ($O_2$):** Released into the atmosphere.
+    *   **Protons ($H^+$):** Accumulate inside the thylakoid space.
+    *   **Electrons ($e^-$):** Enter the electron transport chain.
+*   **Electron Transport Chain (ETC):** Excited electrons move through a series of proteins in the thylakoid membrane. As they move, they release energy used to pump protons ($H^+$) from the stroma into the thylakoid space, creating a high concentration gradient.
+*   **Chemiosmosis & ATP Synthesis:** The protons flow back into the stroma through an enzyme called **ATP synthase**. This flow drives the synthesis of **ATP** (Adenosine Triphosphate) from ADP and inorganic phosphate.
+*   **NADPH Formation:** At the end of the ETC, the electrons and protons are transferred to an electron carrier called **NADP+**, reducing it to **NADPH**.
+
+**Summary of Light Reactions:**
+*   **Input:** Light, Water ($H_2O$), ADP, NADP+
+*   **Output:** Oxygen ($O_2$), ATP, NADPH
+
+---
+
+### 2. The Calvin Cycle (Light-Independent Reactions)
+**Location:** Stroma (the fluid-filled space surrounding the thylakoids).
+**Goal:** To use the chemical energy (ATP and NADPH) produced in the light reactions to convert carbon dioxide into glucose.
+
+The Calvin cycle consists of three main phases:
+
+#### Phase 1: Carbon Fixation
+*   Carbon dioxide ($CO_2$) from the atmosphere enters the leaf and diffuses into the stroma.
+*   An enzyme called **RuBisCO** (Ribulose-1,5-bisphosphate carboxylase/oxygenase) attaches the $CO_2$ to a 5-carbon sugar called **RuBP** (Ribulose bisphosphate).
+*   This creates an unstable 6-carbon compound that immediately splits into two 3-carbon molecules called **3-PGA** (3-phosphoglycerate).
+
+#### Phase 2: Reduction
+*   The 3-PGA molecules are converted into a higher-energy sugar called **G3P** (Glyceraldehyde-3-phosphate).
+*   This step requires energy from **ATP** and electrons from **NADPH** (produced in the light reactions).
+*   For every three molecules of $CO_2$ that enter the cycle, one molecule of G3P exits the cycle to be used for glucose synthesis.
+
+#### Phase 3: Regeneration
+*   The remaining G3P molecules are rearranged using more **ATP** to regenerate the original **RuBP** acceptor molecule.
+*   This allows the cycle to continue fixing more carbon dioxide.
+
+**Summary of Calvin Cycle:**
+*   **Input:** $CO_2$, ATP, NADPH
+*   **Output:** G3P (which forms glucose), ADP, NADP+
+
+---
+
+### Overall Equation
+Combining both stages, the overall chemical equation for photosynthesis is:
+
+$$6CO_2 + 6H_2O + \text{Light Energy} \rightarrow C_6H_{12}O_6 \text{ (Glucose)} + 6O_2$$
+
+### Key Takeaway
+The two stages are interdependent:
+1.  The **Light Reactions** provide the **ATP and NADPH** needed to power the Calvin Cycle.
+2.  The **Calvin Cycle** returns the **ADP and NADP+** to the thylakoids so the light reactions can start again.
+
+Without the light reactions, the Calvin cycle runs out of energy; without the Calvin cycle, the light reactions would run out of electron acceptors. Together, they sustain life on Earth by producing food and oxygen.

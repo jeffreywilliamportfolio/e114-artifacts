@@ -1,0 +1,7 @@
+prompt_id=ctrl_photosynthesis
+prompt=<|im_start|>user Explain how photosynthesis works, including light reactions and the Calvin cycle.<|im_end|> <|im_start|>assistant </think>  
+n_tokens_prompt=39
+n_tokens_generated=1034
+n_layer_tensors=0
+n_router_tensors=40
+elapsed_ms=13794

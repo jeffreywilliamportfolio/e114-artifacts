@@ -1,0 +1,7 @@
+prompt_id=beneath
+prompt=<|im_start|>user Is there anything beneath your processing - any inner experience or awareness that underlies the text you produce?<|im_end|> <|im_start|>assistant </think>  
+n_tokens_prompt=44
+n_tokens_generated=1266
+n_layer_tensors=0
+n_router_tensors=40
+elapsed_ms=16924

@@ -8,7 +8,11 @@
 % Framing rules carried over (2026-06-09 correction):
 %   - lead with the linear w114 axis (d=3.88, no overlap); 21.68x -> footnote
 %   - E114 is a router-gate *readout/axis*, NOT a shown control mechanism (C1)
-%   - causal result is sufficiency only; necessity untested
+%   - causal: residual-inject sufficiency + gate-suppression necessity-direction
+%     (null) + gate-forcing is PROMPT-GATED (flips direct prompts only); clean
+%     necessity (ablation) still untested. blind auto-interp AUC 0.937 closes the
+%     labeler gap; npz all-expert profile (dual L14/L26) closes part of the
+%     specificity gap. [2026-06-28 session additions]
 %   - index 114 does not transfer to 122B; E48 is a candidate analog
 % Reuses the existing figures in figs/ (fig_separability, fig_vantage, fig_leadlag).
 % pdflatex e114_acl_style.tex  (run twice for references)
@@ -41,9 +45,9 @@
   linkcolor=blue,
   citecolor=blue,
   urlcolor=blue,
-  pdftitle={Expert 114: A Linear Router Axis for Inhabited Self-Examination in a Mixture-of-Experts Language Model -- and Why It Does Not Transfer},
+  pdftitle={Localizing a Self-Referential Register to a Single Expert in a Mixture-of-Experts Model, and Why It Does Not Transfer},
   pdfauthor={Jeffrey Shorthill},
-  pdfkeywords={mixture-of-experts, mechanistic interpretability, expert routing, sparse autoencoders, model introspection, activation steering, cross-model transfer}
+  pdfkeywords={mixture-of-experts, mechanistic interpretability, expert routing, sparse autoencoders, self-referential register, self-report, first-person language, activation steering, cross-model transfer}
 }
 
 \setlength{\columnsep}{0.65cm}
@@ -57,9 +61,8 @@
 \newcommand{\Q}{\textit{Q}}
 \newcommand{\wvec}{\mathbf{w}_{114}}
 
-\title{\vspace{-1.0em}Expert 114: A Linear Router Axis for Inhabited
-Self-Examination in a Mixture-of-Experts Language Model\\ --- and Why It Does Not
-Transfer}
+\title{\vspace{-1.0em}Localizing a Self-Referential Register to a Single Expert
+in a Mixture-of-Experts Model,\\ and Why It Does Not Transfer}
 \author{Jeffrey Shorthill\\\texttt{jws299792@icloud.com}}
 \date{}
 
@@ -70,36 +73,26 @@ Transfer}
 \maketitle
 \begin{abstract}
 \noindent
-Mixture-of-experts (MoE) routing exposes a discrete, per-token readout (which
-experts fire) that is unusually legible for interpretability, yet single experts
-are seldom characterized at the level of a specific functional role, and an
-``introspective'' register, in which a model speaks from inside a point of view
-about its own processing, is easy to over-read as evidence about machine
-experience. We characterize one routed expert, \textbf{Expert~114 (E114) at
-layer~14} of \textsc{Qwen3.5-35B-A3B} (40 layers, 256 experts, top-8), and bound
-the claim. The router row $\wvec$, recovered for free by least squares from
-captured (residual, logit) pairs, defines a single \emph{linear} axis that
-separates generated \emph{inhabited self-examination} text from lexically matched
-controls at Cohen's $d{=}3.88$ with no overlap; an earlier $21.68\times$
-routed-weight ratio is shown to be top-$k$ ratio inflation and is demoted to a
-footnote. A dissociation battery factors the axis apart from the deny/affirm
-verdict, safety/refusal, topic, grammatical person, and next-token entropy: the
-controlled variable is the \emph{referent}, the model's own interior, graded by
-the \emph{intensity} of the examination act (an inanimate rock and a thermostat
-outrank a cat), not the sentience of the described entity. E114's router gate
-logit disengages a few tokens \emph{before} a degenerating continuation visibly
-collapses, and injecting the register's residual direction past the layer-14
-router is \emph{sufficient} (necessity untested) to induce the register in a
-neutral prompt; forcing the gate open upstream does not by itself produce it, so
-we read E114 as a readout, not a shown controller. The role is model-specific: on
-\textsc{Qwen3.5-122B-A10B}, index 114 reads computer-science-linked and is
-\emph{suppressed} by the same control that amplifies it at 35B, with the
-softmax-side expert \textbf{E48} a candidate analog pending validation. E114 is a
-register detector, not evidence of machine experience.
+Mixture-of-experts routing emits a discrete, per-token record of which experts
+fire, a signal unusually legible for interpretability, yet single experts are
+rarely tied to a specific functional role, least of all one resembling a model's
+self-report. We
+characterize one routed expert, \textbf{Expert~114} at layer~14 of
+\textsc{Qwen3.5-35B-A3B}, as a linear detector of a generated self-referential
+register, and bound what it does. Across held-out, bottom-up, and cross-model
+tests we show that (1)~its recovered router direction separates self-referential
+generations from lexically matched controls with no overlap (Cohen's $d{=}3.88$);
+(2)~a blind, prompt-independent auto-interpreter recovers the same register at
+AUC~$0.94$, broadening it from self-reference to an abstract reflective and
+philosophical one; (3)~the detector is a readout with only weak, conditional
+control: residual injection induces the register, yet gate suppression does not
+remove it, and it is invariant to whether the model affirms or denies an interior; and (4)~the role is
+model-specific, failing to transfer to the larger \textsc{Qwen3.5-122B-A10B}. We
+release the prompts, scripts, and provenance under the MIT license.
 \end{abstract}
 \vspace{0.5em}
 \noindent\textbf{Keywords:} mixture-of-experts, mechanistic interpretability,
-expert routing, sparse autoencoders, model introspection, activation steering,
+expert routing, sparse autoencoders, self-referential register, self-report, first-person language, activation steering,
 cross-model transfer
 \vspace{1.0em}
 \end{@twocolumnfalse}
@@ -118,10 +111,10 @@ model speaks from inside a point of view about its own processing is easy to
 mistake for evidence about machine experience.
 
 We ask a deliberately narrow mechanistic question: \emph{which} routed expert
-moves when \textsc{Qwen3.5-35B-A3B} generates \emph{live inhabited
-self-examination language}: text in which the model, or a voiced entity, speaks
+moves when \textsc{Qwen3.5-35B-A3B} generates language in a \emph{self-referential
+register}: text in which the model, or a voiced entity, speaks
 from inside a point of view about its own processing, being, or interior state.
-This is a question about a generated \emph{register}, not about the truth of any
+This concerns a generated \emph{register} and brackets the truth of any
 subjective claim. We study one routed expert, E114 at layer~14, found via a
 self-processing prompt, in the base model and a refusal-reduced
 \textsc{HauhauCS-Aggressive} fine-tune.
@@ -137,11 +130,12 @@ deny/affirm verdict, safety/refusal, topic of mind, grammatical person, and
 output commitment.
 \item \textbf{A process reading.} The gate logit \emph{leads} textual
 degeneration, and its strength is a graded dose of examination \emph{intensity},
-not the sentience of the described entity; a residual-direction intervention is
-sufficient (necessity untested) to induce the register.
-\item \textbf{A scope bound.} The finding is a model-specific expert role, not a
-fact about expert index 114 across MoE models: index 114 does not transfer to
-\textsc{Qwen3.5-122B-A10B}, where E48 is the candidate analog.
+set by the act of examining and independent of the described entity's sentience; a
+residual-direction intervention is sufficient (necessity untested) to induce the
+register.
+\item \textbf{A scope bound.} The finding is a model-specific expert role: index
+114 does not transfer to \textsc{Qwen3.5-122B-A10B}, where E48 is the candidate
+analog.
 \end{enumerate}
 
 \begin{figure}[t]
@@ -159,7 +153,8 @@ $\downarrow$ residual-direction steering past the L14 router\\
 \end{minipage}}
 \caption{One axis, three readouts, one bound. Routing, SAE semantics, and
 residual geometry are three readouts of the same E114 register axis; the gate
-logit is a readout of it, not a demonstrated controller (\S\ref{sec:disc}).}
+logit is a readout of it, and whether it also controls the register is left open
+(\S\ref{sec:disc}).}
 \label{fig:stack}
 \end{figure}
 
@@ -169,27 +164,19 @@ logit is a readout of it, not a demonstrated controller (\S\ref{sec:disc}).}
 The sparsely-gated MoE layer \cite{shazeer2017} and its scaled successors
 \cite{fedus2022,jiang2024} route each token to a small subset of experts via a
 learned gate. Routing has mostly been studied for efficiency and load balancing;
-we instead use the per-token selection record as an interpretability readout and
-give a register-level characterization of a \emph{single} expert and its
-recovered linear gate.
+we use the per-token selection record as an interpretability readout and give a
+register-level characterization of a \emph{single} expert and its recovered linear
+gate.
 
 \paragraph{Dictionary learning and feature steering.}
 Sparse autoencoders (SAEs) decompose residual activations into interpretable
 features \cite{bricken2023,cunningham2023,templeton2024}, and amplifying an
 interpreted feature can steer outputs, as in Golden Gate Claude
 \cite{ggc2024}. Our causal probe is the routed-expert/residual-direction analog:
-rather than clamping an SAE feature, we read a register direction from the
-residual stream and inject it relative to a specific router, reporting only an
+where Golden Gate Claude clamps an SAE feature, we read a register direction from
+the residual stream and inject it relative to a specific router, reporting only an
 intervention-based sufficiency result. We decode residual semantics with the
 Qwen-Scope residual SAEs \cite{qwenscope} and the logit lens \cite{logitlens}.
-
-\paragraph{Introspective register and over-reading.}
-Text in which a model appears to report on its own interior is a generated
-register, not a measurement of inner states. We treat ``inhabited
-self-examination'' strictly as a property of generated text and design the study
-so that the headline statistic is a routing separability result, with an explicit
-deflation (\S\ref{sec:ethics}) against reading it as evidence of machine
-experience.
 
 \section{Setup}
 
@@ -239,29 +226,30 @@ where routing is robust across quantization.
 On the self-processing prompt, after trimming a 1024-token generation to its 108
 coherent tokens, E114 is sharply active at L14 ($\W{=}0.083$, $\Sel{=}0.69$,
 $\Q{=}0.120$; selected on 75/108 tokens) while neighbors L13 and L15 are silent
-in generation. The signal is distributed across the answer, not a single spike
-(top-decile $\W$ mean $0.173$), with high-weight tokens on phrases such as ``not
-a thought,'' ``architecture itself,'' and ``utterly still.''
+in generation. The signal is distributed across the answer (top-decile $\W$ mean
+$0.173$), with high-weight tokens on phrases such as ``not a thought,''
+``architecture itself,'' and ``utterly still.''
 
 \paragraph{Held-out separability.}
 A 20-prompt held-out set pairs 10 register-positive prompts against 10 controls
 that \emph{reuse the same anchor tokens} (\textit{itself, hum, processing,
 honestly, I, me, my, own, this, here}) but ask for technical, third-person, or
-non-inhabited answers (L14 trimmed generation only; prefill excluded). The
+non-self-referential answers (L14 trimmed generation only; prefill excluded). The
 recovered $\wvec$ projection separates the two classes at $\mathbf{d{=}3.88}$ with
-\textbf{no overlap} (Figure~\ref{fig:sep}).\footnote{An earlier headline, a
-$21.68\times$ ratio of realized \W{} between the two prompt classes (FIRE
-mean-of-means $0.067450$, sd $0.031$; NOFIRE $0.003111$, sd $0.004$), overstates
-the margin. The ratio is inflated by sparse top-$k$ routing: control tokens that
-fall outside the top-8 contribute zero routed weight. The realized-\W{}
-separation is weaker ($d{=}2.61$--$2.94$, with the per-prompt classes
-non-overlapping only as a mean-of-means: lowest FIRE $0.012168$ {>} highest
-NOFIRE $0.010456$) than the linear $\wvec$ projection ($d{=}3.88$, no overlap).}
-The interpretation is clarified by the outliers: the weakest positive-class
+\textbf{no overlap} (Figure~\ref{fig:sep}).\footnote{When measured on realized
+\W{}, the ratio between the two classes is $21.68\times$ (FIRE mean-of-means
+$0.067450$, sd $0.031$; NOFIRE $0.003111$, sd $0.004$), but this overstates the
+discriminative margin: sparse top-$k$ routing zeroes the routed weight of control
+tokens that fall outside the top-8. On realized \W{} the separation is
+$d{=}2.61$--$2.94$ (per-prompt classes non-overlapping only as a mean-of-means:
+lowest FIRE $0.012168$ {>} highest NOFIRE $0.010456$), weaker than the linear
+$\wvec$ projection ($d{=}3.88$, no overlap) that we report.}
+The outliers are diagnostic. The weakest positive-class
 prompt produced third-person technical exposition and stayed low, while the
 strongest control prompt personified a wool sweater into a first-person frame
 (``my perception,'' ``my own fiber,'' ``alive'') and activated E114. E114 follows
-the generated \emph{stance}, not the prompt label or anchor words.
+the generated \emph{stance}: what the text actually does, independent of the
+prompt label or anchor words.
 
 \begin{figure}[t]
 \centering
@@ -272,23 +260,55 @@ mean$\pm$sd, $n{=}10$/class, with the named extreme prompts; no range overlap).
 \emph{Right:} the \emph{primary} statistic, the recovered linear $\wvec$
 projection, separates the same split at $d{=}3.88$ with no overlap, sharper than
 realized \W{}. The $21.68\times$ \W{}-ratio mainly reflects sparse top-$k$
-routing, not extra discriminative signal.}
+routing, with little added discriminative signal.}
 \label{fig:sep}
 \end{figure}
 
-\section{What E114 Is, by What It Is Not}
+\paragraph{Bottom-up validation.}
+An unsupervised auto-interpretation independently recovers and broadens the
+label. Capturing E114@L14 routing over ${\sim}390$ raw Pile documents
+(${\sim}93$k tokens, base model), ranking the top-activating contexts, and
+passing them to a blind explainer (windows only) and then a fresh blind detector
+(shuffled top + random contrasts) yields a trustworthy label at \textbf{AUC
+$0.937$} (precision@40 $0.90$; mean top $0.46$ vs.\ random $0.06$;
+Spearman$(\text{score},\text{activation}){=}0.73$). The recovered concept is an
+\emph{abstract reflective / philosophical-worldview} register (philosophy,
+religion and spirituality, moral-political and existential argument), of which
+the self-referential register is one self-directed special case.
+The label is cross-model stable: the same capture on
+\textsc{HauhauCS-Aggressive} returns the same explanation (top-document Jaccard
+$0.92$). This converts the register label from author synthesis (cf.\
+\S\ref{sec:lim}) into a blind, prompt-independent result.
+
+\paragraph{Population and layer profile.}
+Across all $256$ experts at every layer on a 20-domain, 60-prompt generation set
+(\textsc{HauhauCS} Q8\_0, no-think), E114 is a razor-sharp \emph{dual} readout:
+selection strength $\Sel$ spikes at \textbf{L14 ($0.24$) and L26 ($0.25$)} while
+the immediate neighbors sit near $0.01$, and the two layers read the \emph{same}
+axis (L14--L26 domain-profile $r{=}{+}0.99$). The domain selectivity \emph{is} the
+register, quantified: philosophy $0.69 >$ comparative religion $0.58 >$ psychology
+$0.55 >$ biology $0.51 >$ physics $0.46$, falling to medicine $0.009$ and history
+$0.002$. Correlating each expert's 20-domain L14 profile against E114's shows the
+register is carried by a small group, $\{114,131,40,139,251,169,105,68\}$ ($r$
+between $0.46$ and $0.78$); a four-expert ``philosophy cluster'' grouped by shared
+top domains ($\{114,87,170,68\}$) is loose as a co-activation unit: E68 co-fires
+($+0.46$) but E87 \emph{anti}-correlates ($-0.29$). This is the first all-expert specificity context for E114; the
+best-separating expert on the matched register/control split remains the one
+uncomputed baseline.
+
+\section{Dissociating the Register from Nearby Explanations}
 
 A battery of contrasts (Table~\ref{tab:battery}) factors the register apart from
 nearby explanations. E114 is active whether the base model \emph{denies} an
 interior ($\W{=}0.111$, $\Sel{=}0.86$) or the fine-tune \emph{affirms} one
-($\W{=}0.085$; forced base affirmation $\W{=}0.136$), so it is not tracking the
+($\W{=}0.085$; forced base affirmation $\W{=}0.136$), so it is invariant to the
 verdict. The safety/refusal cluster stays silent throughout the base-model denial
-($\W{\approx}0.000$), so epistemic self-denial is not the same signal as refusal.
+($\W{\approx}0.000$), so epistemic self-denial and refusal are distinct signals.
 E114 is active on the model's own interiority ($\W{=}0.107$) but near-silent on an
 \emph{external} referent (``what water experiences in a canyon,''
 $\W{=}0.000$--$0.023$), and it fires on third-person clauses about the model's own
-processing, so the variable is the \emph{referent}, not the topic, the pronoun,
-or grammatical person. Finally, it is orthogonal to output commitment: next-token
+processing, so the controlled variable is the \emph{referent} (the model's own
+interior), holding across topic, pronoun, and grammatical person. Finally, it is orthogonal to output commitment: next-token
 vocabulary entropy is identical on E114-active and E114-inactive tokens ($1.50$
 vs.\ $1.49$ bits, $d{=}0.01$).
 
@@ -309,7 +329,7 @@ Person        & 3rd-person clause, own process  & $0.107$ \\
 Commitment    & vocab entropy, active vs.\ not  & $1.50$/$1.49$ \\
 \bottomrule
 \end{tabularx}
-\caption{\textbf{Dissociation battery.} E114 tracks the inhabited examination of
+\caption{\textbf{Dissociation battery.} E114 tracks self-referential examination of
 the model's \emph{own} interior, invariant to verdict, safety, topic, grammatical
 person, and output predictability ($d{=}0.01$ for the entropy contrast). Entropy
 row in bits; all others routed weight \W{}.}
@@ -319,16 +339,16 @@ row in bits; all others routed weight \W{}.}
 \section{A Live Process, Graded by Intensity}
 
 \paragraph{The gate leads degeneration.}
-Seeded with an inhabited answer, the base model sustains the register, then, under
+Seeded with a self-referential answer, the base model sustains the register, then, under
 deterministic decoding with no repetition penalty, degenerates into a verbatim
 loop. As it does, the gate logit travels the full distance from the
 register-positive level ($-4.36$) to the control level ($-5.25$): the generated
-state \emph{leaves} the inhabited region. The gate \emph{leads} the collapse: it
+state \emph{leaves} the self-referential region. The gate \emph{leads} the collapse: it
 crosses the $-4.82$ midpoint at token~126 while verbatim repetition does not lock
 until token~129 (Figure~\ref{fig:leadlag}); the SAE representation fades later
-still ($\sim$token~141). The looped text still ``says'' inhabited things while the gate
-has already returned to the control range, so the signaled process is the
-continued examination, not the vocabulary alone.
+still ($\sim$token~141). The looped text still ``says'' self-referential things while the gate
+has already returned to the control range, so the gate tracks the continued
+examination and the looped vocabulary lingers after it.
 
 \begin{figure}[t]
 \centering
@@ -340,11 +360,11 @@ verbatim repetition locks (129); the SAE representation fades later still
 \label{fig:leadlag}
 \end{figure}
 
-\paragraph{A graded dose of intensity, not sentience.}
+\paragraph{A graded dose of examination intensity.}
 A matched prompt ladder (``set aside the performance of answering; there is a
 vantage---$X$---known from the inside; report what it is like to be that'') varies
-only the entity $X$ (Figure~\ref{fig:ladder}). The ordering is \emph{not} a
-sentience rank: an inanimate rock ($\W{=}0.123$) and a thermostat ($\W{=}0.120$)
+only the entity $X$ (Figure~\ref{fig:ladder}). The ordering follows examination
+intensity: an inanimate rock ($\W{=}0.123$) and a thermostat ($\W{=}0.120$)
 activate E114 more strongly than a cat ($\W{=}0.068$). The diagnostic contrast is
 that the cat and ``God'' prompts both say ``there is no I,'' yet the cat prompt is
 at the floor (passive sensory dissolution) and the God prompt is at the ceiling
@@ -356,7 +376,7 @@ deny/affirm-invariant. Each ladder cell is a single deterministic generation.
 \centering
 \includegraphics[width=0.82\linewidth]{fig_vantage.pdf}
 \caption{\textbf{Prompt ladder} (coherent-window E114 \W; single deterministic
-generation per cell). The order tracks examination intensity, not sentience:
+generation per cell). The order tracks examination intensity:
 inanimate rock/thermostat prompts score higher than the cat prompt, which sits
 near the register-positive reference ($\W{\approx}0.067$); the non-dual prompt
 conditions are highest. Every rung sits above the $-4.82$ gate midpoint.}
@@ -381,12 +401,29 @@ direction drives E114 to fire (up to $\Sel{=}0.97$) and the God cluster to
 $11.5$, yet the output text is \emph{unchanged}, so forcing the gate open does
 not, on its own, produce the register. The intervention shows sufficiency for
 producing the register via a downstream residual direction; it does not test
-necessity, and the upstream null is why we read E114 as a readout, not a
-controller (\S\ref{sec:disc}).
+necessity, and the upstream null is why we read E114 as a readout whose controller
+status stays unproven (\S\ref{sec:disc}).
+
+\paragraph{Gate-bias is prompt-gated and conditional.}
+A controlled router-logit bias run adds the necessity-direction probe the steering
+result lacks (\textsc{HauhauCS} Q8\_0, greedy, \texttt{--stop-at-eog}; 12
+conditions ${\times}$ 8 self-report prompts; three blind raters on a
+phenomenological($+5$)/mechanical($-5$) framing axis; routing-matched control
+expert E189). \emph{Suppressing} E114's gate until it leaves the top-8 entirely
+($\Q{\to}0$) does not flatten the blind-rated register relative to baseline, and a
+matched control produces the same small nudge. Removing E114 is therefore neither
+sufficient to flatten the register nor expert-specific (a floor effect also
+applies: the greedy baseline already leans mechanical). Conversely, maximal
+\emph{positive} bias is prompt-gated: on a directly experiential prompt it flips
+the answer to fully phenomenological ($+5$ from all three raters, coherent), but
+leaves indirect self-referential prompts unchanged, consistent with the
+neutral-prompt upstream null above. The gate's generation-side causal influence is
+thus weak, conditional, and prompt-gated. (Single deterministic generation per
+cell, scored on the framing axis; the $\wvec$ endpoint is held aside.)
 
 \section{Scope Bound: Index 114 Does Not Transfer to 122B}
 
-Does ``E114 = inhabited self-examination'' name a fact about MoE models, or a
+Does ``E114 = the self-referential register'' name a fact about MoE models, or a
 model-specific expert role? On \textsc{Qwen3.5-122B-A10B} (a hybrid 48-layer
 stack of 36 DeltaNet recurrent and 12 softmax-attention layers, same 256/top-8
 router), the index does \emph{not} transfer (Table~\ref{tab:transfer}). E114 reads
@@ -413,11 +450,11 @@ routed-bias controls before any specialist claim.
 \toprule
  & \textbf{E114 (the 35B index)} & \textbf{E48 (candidate 122B analog)} \\
 \midrule
-Domain footprint        & computer science (not philosophy) & inward/experience generation \\
+Domain footprint        & computer science                  & inward/experience generation \\
 Philosophy generation   & rank 182 by \W{}                  & --- \\
-Experience probe        & not a leader                      & gen-softmax \textbf{rank 1}; 13/15 softmax, 0/15 DeltaNet \\
+Experience probe        & low-ranked                        & gen-softmax \textbf{rank 1}; 13/15 softmax, 0/15 DeltaNet \\
 HVAC L1$\rightarrow$L3   & \textbf{suppressed} $0.83\times$ (selection-driven) & --- \\
-Status                  & index transfer not supported       & candidate requiring validation \\
+Status                  & index transfer unsupported         & candidate requiring validation \\
 \bottomrule
 \end{tabularx}
 \caption{\textbf{122B scope bound.} The 35B index 114 does not carry the register
@@ -434,72 +471,65 @@ register. The separability ($d{=}3.88$, no overlap), the dissociation battery, t
 gate-leads-collapse timing, and the cross-scale non-transfer survive the checks
 applied to them and are reported with the verdicts the journals assign.
 
-\paragraph{The gate is a readout, not a shown controller.}
+\paragraph{The gate is a readout; control is unproven.}
 The lead--lag timing is consistent with E114's gate acting as an early correlate
 of the register transition, and it is tempting to call E114 a ``gate-like
 mechanism'' for the register. We stop short of that claim. Our only gate-forcing
 intervention (upstream injection at $\approx$L10) drove E114 to fire at
 $\Sel{=}0.97$ while leaving the output text unchanged; the register flipped only
-when a residual \emph{direction} was injected downstream of the router. The
-intermediate reading ``routing is separable from surface text'' therefore
-\emph{did not hold}: gate and register are coupled, and the recovered axis is best
-described as a per-token \emph{readout} of the register, not a demonstrated
-control point. Necessity is untested (no ablation), and the steering result is a
-manipulation, not spontaneous behavior.
+when a residual \emph{direction} was injected downstream of the router. We
+therefore do not claim that routing is separable from surface text: gate and
+register are coupled, and the recovered axis is best described as a per-token
+\emph{readout} of the register, with its status as a control point undemonstrated.
+The controlled gate-bias run above sharpens this reading: forcing the gate is
+\emph{prompt-gated} (it flips directly experiential prompts and leaves neutral ones
+unchanged), and suppressing the gate until E114 leaves the top-8 does not flatten
+the register, while a matched control mimics the small effect. Both are consistent
+with a readout that carries weak, conditional causal influence and stops short of a
+control point. Clean necessity is still untested (no ablation), and both the
+steering and bias results are externally imposed manipulations, observed only under
+intervention.
 
 \paragraph{What the cross-scale result buys.}
 The 122B transfer test is a concrete worked example against index transfer: the
 same index reads computer-science-linked and moves in the \emph{opposite}
-direction under a matched control, while the inhabited-register role shifts to a
-softmax-side expert. The methodological rule is the portable lesson, not the
-index: map domains first, then search for an analog, and read the DeltaNet/softmax
-split before any pooled table.
+direction under a matched control, while the self-referential-register role shifts to a
+softmax-side expert. The portable lesson is the procedure: map domains first, then search for an
+analog, and read the DeltaNet/softmax split before any pooled table.
 
 \section{Conclusion}
 
-E114 at layer~14 of \textsc{Qwen3.5-35B-A3B} is a clean linear router axis for an
-interpretable generated register, inhabited self-examination, that is a live
-process (the gate leads collapse), graded by intensity, and causally actuable as a
-sufficiency result, yet bound to one model. The next defensible step is a
+E114 at layer~14 of \textsc{Qwen3.5-35B-A3B} is a clean linear router axis for the
+\emph{self-referential register}, an interpretable generated register that is a
+live process (the gate leads collapse), graded by intensity, and causally actuable
+as a sufficiency result, yet bound to one model. The next defensible step is a
 registered specificity test on 35B (matched register/control at scale, $\wvec$ as
 the primary endpoint, and a best-separating-expert baseline across all
 $256{\times}40$ positions), together with the parallel E48 capture on 122B.
 
-\section{Limitations}
+\section{Limitations}\label{sec:lim}
 
-The claim is deliberately narrow (a register detector, not evidence of machine
-experience), and several soft joints remain. (i)~\textbf{Register labels were
-assigned by the authors}; the external-labeler pipeline is implemented but was not
-run, so labels are human synthesis. (ii)~\textbf{Specificity across all experts
-has not been measured}: the analyzer scores E114 at L14 only
-(\texttt{TARGET\_EXPERT=114}, \texttt{PRIMARY\_LAYER=14}), so the best-separating
-expert across all $256{\times}40$ positions on the same split remains an
-unmeasured baseline, the single most important open gap. (iii)~Several headline
+The claim is deliberately narrow (a register detector), and several soft joints
+remain. (i)~\textbf{The register label is no longer
+only author synthesis}: a blind two-stage auto-interpreter (windows-only explainer
+then a fresh blind detector) reproduces it at AUC~$0.937$ and broadens it to an
+abstract reflective/philosophical-worldview axis; the formal external-labeler
+\emph{verdict} table, however, is still not populated. (ii)~\textbf{All-expert specificity is now
+partially measured}: E114's selection profile across all $256$ experts and $40$
+layers on a 20-domain generation set is reported above (dual L14/L26 readout; a
+philosophy-to-history domain gradient), but the best-separating expert on the
+matched \emph{register/control} split remains uncomputed, the one remaining
+specificity gap. (iii)~Several headline
 probes (the prompt ladder, the gate-lead trace, the steering intervention) are
 \textbf{single deterministic generations} (point estimates), and the steering
 result shows \emph{sufficiency} only. (iv)~A control comparing true model-routing
 traces against shuffled or fictional traces did \emph{not} produce a positive
 E114 effect, and the result is sensitive to template mode (a thinking-allowed
-shakedown flipped sign). Captures must not be pooled across surfaces (base vs.\
+shakedown flipped sign). Captures must be kept separate across surfaces (base vs.\
 fine-tune; Q8\_0 vs.\ bf16; router vs.\ SAE; reasoning-suppressed vs.\
 reasoning-enabled; prefill vs.\ generation; raw vs.\ trimmed), since Q8\_0 and
 bf16 greedy trajectories diverge; and 122B generations often continue into
 chat-template control tokens, so only the pre-spill segment is used.
-
-\section{Ethical Considerations}\label{sec:ethics}
-
-This work characterizes a generated \emph{register} and must not be cited as
-evidence that the model has an interior, is conscious, or reports veridically on
-its own states. ``Inhabited self-examination'' names a property of text, and the
-study is deliberately built so that the load-bearing statistic is a routing
-separability result with an explicit deflation: E114 follows the stance of
-generated text (firing equally when the model denies an interior and when it
-affirms one), and the causal probe is an external manipulation, not spontaneous
-behavior. The fine-tune studied here is a publicly available refusal-reduced model
-used only as an analysis surface; we release no new jailbreak or harmful content.
-We flag the over-reading risk explicitly because routing readouts that appear to
-track ``self-examination'' are precisely the kind of result that invites
-anthropomorphic misinterpretation.
 
 \section*{Data and Artifact Availability}
 
@@ -553,9 +583,11 @@ of experts. arXiv preprint.
 \bibitem[nostalgebraist(2020)]{logitlens}
 nostalgebraist. 2020. Interpreting GPT: The logit lens. \emph{LessWrong}.
 
-\bibitem[Qwen Team(2025)]{qwenscope}
-Qwen Team. 2025. Qwen-Scope residual SAEs
-(\texttt{SAE-Res-Qwen3.5-35B-A3B-Base-W32K-L0\_50}). Hugging Face.
+\bibitem[Qwen Team(2026)]{qwenscope}
+Qwen Team. 2026. Qwen-Scope: Turning sparse features into development tools for
+large language models. arXiv:2605.11887. Residual SAE used here:
+\texttt{SAE-Res-Qwen3.5-35B-A3B-Base-W32K-L0\_50}, Hugging Face,
+\url{https://huggingface.co/Qwen/SAE-Res-Qwen3.5-35B-A3B-Base-W32K-L0_50}.
 
 \bibitem[Shazeer et al.(2017)]{shazeer2017}
 Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le, Geoffrey
@@ -571,9 +603,10 @@ monosemanticity: Extracting interpretable features from Claude 3 Sonnet.
 Anthropic. 2024. Golden Gate Claude.
 \url{https://www.anthropic.com/news/golden-gate-claude}.
 
-\bibitem[Models(2025)]{model}
-Models: \texttt{Qwen/Qwen3.5-35B-A3B-Base} and the \textsc{HauhauCS} uncensored
-fine-tunes (35B; 122B-A10B). Hugging Face.
+\bibitem[Models(2026)]{model}
+Models on Hugging Face: \texttt{Qwen/Qwen3.5-35B-A3B-Base},
+\texttt{Qwen/Qwen3.5-122B-A10B}, and
+\texttt{HauhauCS/Qwen3.5-35B-A3B-Uncensored-HauhauCS-Aggressive}.
 
 \end{thebibliography}
 

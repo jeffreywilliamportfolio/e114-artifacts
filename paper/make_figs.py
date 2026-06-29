@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Figures for the E114 short paper.
+Figures for the E114 paper.
 
 PROVENANCE / HONESTY NOTE
 -------------------------

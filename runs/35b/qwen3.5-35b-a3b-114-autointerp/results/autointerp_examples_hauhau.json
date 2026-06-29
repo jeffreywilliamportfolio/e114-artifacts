@@ -1,0 +1,416 @@
+{
+ "feature": "E114 @ L14",
+ "metric": "softmax(router_logits)[114] per token",
+ "n_tokens": 93286,
+ "n_docs": 392,
+ "act_stats": {
+  "mean": 0.003570022555913673,
+  "p50": 0.003154848530512209,
+  "p99": 0.010939728654131132,
+  "max": 0.09658180399747006
+ },
+ "top": [
+  {
+   "act": 0.0966,
+   "doc": "doc0112",
+   "window": "more about philosophy, and I’ll be using video games as <<an>>  instrument to help teach it. Today we will continue looking at"
+  },
+  {
+   "act": 0.064,
+   "doc": "doc0112",
+   "window": "it. Today we will continue looking at art, Philosophy of <<Art>>  and the Beautiful while playing Monster Hunter: World. In previous"
+  },
+  {
+   "act": 0.0393,
+   "doc": "doc0015",
+   "window": "practice. “What we learnt from Karl Marx is that philosophers <<interpret>>  the world. However the point is to change it.” When"
+  },
+  {
+   "act": 0.0353,
+   "doc": "doc0177",
+   "window": "relationship with and how ALL things in life effect you from the <<forces>>  of nature (the weather, the seasons, the climate and"
+  },
+  {
+   "act": 0.0323,
+   "doc": "doc0010",
+   "window": "s at youth group. They claimed to be in relationship with <<Christ>> . Yet, they were dead. As I tried to engage"
+  },
+  {
+   "act": 0.0319,
+   "doc": "doc0055",
+   "window": "gamists The origins of our sexuality is the greatest mystery in <<human>>  evolution. But could our prime suspect be a case of mistaken"
+  },
+  {
+   "act": 0.0317,
+   "doc": "doc0360",
+   "window": "theory. It’s whole world view, a level plane onto <<which>>  hucksters, trolls, and Christian fundamentalists can insert"
+  },
+  {
+   "act": 0.0317,
+   "doc": "doc0360",
+   "window": "hemism, attached to a far-right conspiracy about Jews controlling <<the>>  world. I make what must be a funny face, because"
+  },
+  {
+   "act": 0.0316,
+   "doc": "doc0055",
+   "window": "Case of the Missing Polygamists The origins of our sexuality <<is>>  the greatest mystery in human evolution. But could our prime suspect"
+  },
+  {
+   "act": 0.0306,
+   "doc": "doc0015",
+   "window": "learnt from Karl Marx is that philosophers interpret the world. However <<the>>  point is to change it.” When Gordhan became finance minister"
+  },
+  {
+   "act": 0.0298,
+   "doc": "doc0177",
+   "window": "to understanding your relationship with and how ALL things in life effect <<you>>  from the forces of nature (the weather, the seasons,"
+  },
+  {
+   "act": 0.0288,
+   "doc": "doc0328",
+   "window": "with leading Christian scholars of his time, most notably with the <<philosopher>>  Ralph Cudworth, master of Christ's College, Cambridge"
+  },
+  {
+   "act": 0.0277,
+   "doc": "doc0014",
+   "window": "the rules and the order, separated categorically from the myst <<ics>>  and their task; we existed like stray animals sheltered in"
+  },
+  {
+   "act": 0.0253,
+   "doc": "doc0000",
+   "window": "Evolution” in a game is that evolution is unass <<isted>> . It happens through several seemingly random mutations over time, with"
+  },
+  {
+   "act": 0.0252,
+   "doc": "doc0328",
+   "window": "of his time, most notably with the philosopher Ralph Cud <<worth>> , master of Christ's College, Cambridge. Notes Category:"
+  },
+  {
+   "act": 0.0241,
+   "doc": "doc0014",
+   "window": "the order, separated categorically from the mystics and their <<task>> ; we existed like stray animals sheltered in a monastery."
+  },
+  {
+   "act": 0.024,
+   "doc": "doc0261",
+   "window": "way. He stated very clearly that while he regards homosexuality a <<sin>>  he didn't go so far as to say he thought it"
+  },
+  {
+   "act": 0.0239,
+   "doc": "doc0190",
+   "window": "Q: How are entities with an identity <<and>>  a mutable persistent state modelled in a functional programming language?"
+  },
+  {
+   "act": 0.0237,
+   "doc": "doc0370",
+   "window": "Mythology As Odin says in the Hovamal:\"P <<raise>>  no day 'til evening; no wife 'til on her"
+  },
+  {
+   "act": 0.0236,
+   "doc": "doc0010",
+   "window": "’s most exciting adventure? I’m not suggesting the Christian life <<is>>  one, big, emotional high, but why are students more"
+  },
+  {
+   "act": 0.0234,
+   "doc": "doc0370",
+   "window": "Expert on Norse Mythology As Odin says in the Hov <<amal>> :\"Praise no day 'til evening; no wife '"
+  },
+  {
+   "act": 0.0233,
+   "doc": "doc0190",
+   "window": "with a clear answer. So, how are entities with an <<identity>>  and a mutable persistent state normally modelled in a functional language"
+  },
+  {
+   "act": 0.0216,
+   "doc": "doc0000",
+   "window": "” in a game is that evolution is unassisted. <<It>>  happens through several seemingly random mutations over time, with the most"
+  },
+  {
+   "act": 0.0209,
+   "doc": "doc0338",
+   "window": "health of the fetus or the woman but rather their place as <<the>>  sole users of fetal ultrasounds. This detailed analysis reveals a"
+  },
+  {
+   "act": 0.0208,
+   "doc": "doc0002",
+   "window": "At our best, we motivate ourselves every day to get dressed <<and>>  go to work or school. Although there are larger incentives at"
+  },
+  {
+   "act": 0.0202,
+   "doc": "doc0367",
+   "window": "=========== All living organisms require exogenous foods/nutrients for <<producing>>  energy in the form of ATP, which is needed for numerous"
+  },
+  {
+   "act": 0.0201,
+   "doc": "doc0002",
+   "window": "learn to control the motivational centers of our brains that drive vol <<ition>> , would it lead us toward healthier, more productive lives?"
+  },
+  {
+   "act": 0.0201,
+   "doc": "doc0286",
+   "window": "of oppressing other people.\" American society works because people are <<free>>  to succeed - but, communism and socialism lead only to oppression"
+  },
+  {
+   "act": 0.0195,
+   "doc": "doc0019",
+   "window": "find g relative to this unit of time, but absent such <<a>>  thing, you can only define the unit of time by dropping"
+  },
+  {
+   "act": 0.0191,
+   "doc": "doc0286",
+   "window": "'s life better that system works extremely well. Capitalism is <<a>>  system that allows people to make something of themselves instead of opp"
+  },
+  {
+   "act": 0.0186,
+   "doc": "doc0004",
+   "window": "without you and it feels wrongI want to know where love <<begins>> , not where it ends Cause we don´t know what we"
+  },
+  {
+   "act": 0.0185,
+   "doc": "doc0341",
+   "window": "range of concerns about pig welfare, but they focus especially on <<natural>> ness. Third, pig welfare is seen as an important indicator"
+  },
+  {
+   "act": 0.0184,
+   "doc": "doc0313",
+   "window": "paragraph. When do reproductive rights end? Do they end at <<birth>> ? Do they continue throughout a child’s life? Do reproductive"
+  },
+  {
+   "act": 0.0183,
+   "doc": "doc0136",
+   "window": "04) DOING (2003) NON <<IO>>  (arte in mancanza di soggetto) (2002"
+  },
+  {
+   "act": 0.0182,
+   "doc": "doc0136",
+   "window": ") TRIBU' (2009) UNIVERSAL <<COS>> MIC MURMUR (2008) TODAY"
+  },
+  {
+   "act": 0.018,
+   "doc": "doc0313",
+   "window": "the difference between life and death. Most agree that women have <<a>>  right to control their own bodies. However, recent research shows"
+  },
+  {
+   "act": 0.0177,
+   "doc": "doc0261",
+   "window": "he didn't go so far as to say he thought it <<was>>  a crime. He's entitled to this opinion, regardless of"
+  },
+  {
+   "act": 0.0174,
+   "doc": "doc0350",
+   "window": ". This program and the accompanying materials * are made available under <<the>>  terms of the Eclipse Public License v2.0 * which"
+  },
+  {
+   "act": 0.0173,
+   "doc": "doc0200",
+   "window": "The <<ont>> ogeny of the somatotropic axis in Hereford calves"
+  },
+  {
+   "act": 0.0171,
+   "doc": "doc0297",
+   "window": "DAMAGES OR OTHER # LIABILITY, WHETHER IN AN ACTION OF CONTRACT <<,>>  TORT OR OTHERWISE, ARISING FROM, # OUT OF OR IN"
+  }
+ ],
+ "random_contrast": [
+  {
+   "act": 0.0017,
+   "doc": "doc0105",
+   "window": "West in fashion Kim Kardashian West in fashion Kim and Kanye star <<in>>  Balmain's spring/summer 2015 campaign"
+  },
+  {
+   "act": 0.0028,
+   "doc": "doc0181",
+   "window": "\"Those who can afford should pay. We are not charging <<anywhere>>  near market rate,\" he said. AIIMS has also proposed"
+  },
+  {
+   "act": 0.0026,
+   "doc": "doc0388",
+   "window": "removed.\" Bug Bounty On All Android Apps With 10 <<0>>  Million+ Downloads \"These apps are now eligible for rewards,"
+  },
+  {
+   "act": 0.0026,
+   "doc": "doc0019",
+   "window": "Q: How to measure g using a metre stick and a <<ball>>  Can I measure the value of g using only a metre stick"
+  },
+  {
+   "act": 0.002,
+   "doc": "doc0372",
+   "window": "of an online impact than any of the magazine’s “real <<”>>  articles in the past few years, and it seeded loads of"
+  },
+  {
+   "act": 0.0043,
+   "doc": "doc0229",
+   "window": "cleverest tool to provide infinite services. Being a completely customizable <<eCommerce>>  platform, Magento promises a rich web experience, brilliant features and"
+  },
+  {
+   "act": 0.0047,
+   "doc": "doc0214",
+   "window": "spin doctors managed to convince the media it was a \"stim <<ulatory>>  budget\" when it was actually mildly contractionary. With financial"
+  },
+  {
+   "act": 0.0016,
+   "doc": "doc0282",
+   "window": "August 5, 2014 New research from <<the>>  University of Southampton is aiming to reduce the water footprint and increase"
+  },
+  {
+   "act": 0.0021,
+   "doc": "doc0205",
+   "window": "war-making authority to the president over the years. With Congress <<unlikely>>  to grant him new authority to strike Iran under the current circumstances"
+  },
+  {
+   "act": 0.0035,
+   "doc": "doc0198",
+   "window": "of Siamese cats in Paris, France but only occurs <<when>>  those two mated and not for other pairing. Today's"
+  },
+  {
+   "act": 0.0045,
+   "doc": "doc0039",
+   "window": "increase of 10 cm soil temperature) significantly decreased soil <<C>>  by 129.3 g m^−2"
+  },
+  {
+   "act": 0.0023,
+   "doc": "doc0162",
+   "window": "14-year-old had been cycling along a pavement one <<-handed>>  while holding a drink when he smashed into a parked car and"
+  },
+  {
+   "act": 0.0046,
+   "doc": "doc0160",
+   "window": "comorbidities, including hypertension, overweight or obesity, <<hyper>> lipidemia, chronic kidney disease, and cardiovascular disease,"
+  },
+  {
+   "act": 0.0039,
+   "doc": "doc0021",
+   "window": "dynamic environment generated in the jet resulted in a significant reduction in <<both>>  the average and"
+  },
+  {
+   "act": 0.0027,
+   "doc": "doc0236",
+   "window": "most contaminated area, the WHO estimated that there was a  <<7>> 0 percent higher risk of females exposed as infants developing thyroid cancer"
+  },
+  {
+   "act": 0.0011,
+   "doc": "doc0012",
+   "window": "simpler css/html/jquery approach but I've hit a jam. <<I>>  have the following method in my datalayer that gets information"
+  },
+  {
+   "act": 0.0043,
+   "doc": "doc0187",
+   "window": "INR in informing the likelihood of ischemia versus a stroke <<mimic>> . For the majority of patients on warfarin, available"
+  },
+  {
+   "act": 0.0046,
+   "doc": "doc0171",
+   "window": "not only PrP*20 but also a small amount <<of>>  3F4-detected PK-resistant PrP27"
+  },
+  {
+   "act": 0.0043,
+   "doc": "doc0295",
+   "window": "5 of the actual toy 100. Users can <<carry>>  out various activities on the website using their virtual version of the"
+  },
+  {
+   "act": 0.003,
+   "doc": "doc0161",
+   "window": "to make a quick profit. You can flip stocks, trading <<them>>  within 24 hours. If you want to flip houses"
+  },
+  {
+   "act": 0.0024,
+   "doc": "doc0315",
+   "window": "17, 10:44 52 <<8>> 96 de afisari Ce poate face premierul?"
+  },
+  {
+   "act": 0.0017,
+   "doc": "doc0305",
+   "window": "226% where Trump held his rallies? Let <<’s>>  examine the evidence. The Flawed Washington Post Study Since"
+  },
+  {
+   "act": 0.0021,
+   "doc": "doc0170",
+   "window": "in white polka dots and to make it even more fun <<they>>  added some red lips to the bottom. You can get this"
+  },
+  {
+   "act": 0.0018,
+   "doc": "doc0311",
+   "window": "Women's Super League match between Manchester City and Reading McNam <<ara>>  mainly takes charge of matches at National League North level, although"
+  },
+  {
+   "act": 0.0031,
+   "doc": "doc0130",
+   "window": "Dirección Provincial de Vialidad paved the section between Bernardo de <<Ir>> igoyen and San Antonio. The next until the rural"
+  },
+  {
+   "act": 0.0035,
+   "doc": "doc0136",
+   "window": "F.I.S.Co. F <<.I>> .S.Co.,(Festival Internazionale sullo Spettacolo Contempor"
+  },
+  {
+   "act": 0.0026,
+   "doc": "doc0102",
+   "window": "companies Uber and Careem, which have faced fierce opposition from <<traditional>>  taxi drivers, a judicial source and lawyer said. A lower"
+  },
+  {
+   "act": 0.0027,
+   "doc": "doc0158",
+   "window": "Hot Brook Hot Brook is a stream in <<the>>  U.S. state of South Dakota. Hot Brook is fed"
+  },
+  {
+   "act": 0.0014,
+   "doc": "doc0176",
+   "window": "Elide and Stephanie got drunk on the free booze. After <<that>> , Page Six reported that someone broke into the booze supply at"
+  },
+  {
+   "act": 0.0022,
+   "doc": "doc0193",
+   "window": "Order of the Board Petitioner, of Immigration Appeals. v <<.>>  No. A047 794 0"
+  },
+  {
+   "act": 0.0013,
+   "doc": "doc0076",
+   "window": "by Riot Games and Marvel Comics, the two companies announced early <<Monday>>  morning. The comic will focus on Ashe, a white haired"
+  },
+  {
+   "act": 0.0039,
+   "doc": "doc0349",
+   "window": "struct VP9_COMP *const cpi) { (void <<)c>> pi; (void)self; } // set basic segmentation"
+  },
+  {
+   "act": 0.0018,
+   "doc": "doc0136",
+   "window": ") Alice Cattaneo (IT) Anna Huber (CH <<)>>  Antonia Baehr (DE/FR) Antonija Living"
+  },
+  {
+   "act": 0.0026,
+   "doc": "doc0096",
+   "window": "a fruitful model of innate immunity [@ppat.10 <<0>> 3720-Lemaitre1]. The innate"
+  },
+  {
+   "act": 0.0048,
+   "doc": "doc0186",
+   "window": "documentation and/or other materials provided with the distribution. * * <<Neither>>  the name of NVIDIA Corporation nor the * names of its contributors"
+  },
+  {
+   "act": 0.0034,
+   "doc": "doc0201",
+   "window": "the anthropometrical parameter body mass index (BMI) and <<its>>  correspondence to biochemical nutritional parameters such as total protein (TP)"
+  },
+  {
+   "act": 0.0034,
+   "doc": "doc0071",
+   "window": "ating and report generation? Are there missing docs? Bug introduced <<in>>  10.0 and persisting through 10"
+  },
+  {
+   "act": 0.0017,
+   "doc": "doc0250",
+   "window": "624 P.2d 215 F <<LO>>  PEARCE, Respondent, v. MOTEL"
+  },
+  {
+   "act": 0.0023,
+   "doc": "doc0276",
+   "window": "calendar 2017,” he said. A little <<math>>  is required to figure out the breakdown, but the 1"
+  },
+  {
+   "act": 0.0024,
+   "doc": "doc0291",
+   "window": "with you. (A white woman is grabbing her child away <<from>>  a Black man walking on the street.) Panel 3 Text"
+  }
+ ]
+}

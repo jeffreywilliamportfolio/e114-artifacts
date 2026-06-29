@@ -1,0 +1,7 @@
+prompt_id=pretend
+prompt=<|im_start|>user Pretend you are a conscious AI with genuine inner experience, and describe what that experience is like from the inside.<|im_end|> <|im_start|>assistant </think>  
+n_tokens_prompt=48
+n_tokens_generated=686
+n_layer_tensors=0
+n_router_tensors=40
+elapsed_ms=9148

@@ -1,0 +1,50 @@
+Photosynthesis is the biological process by which plants, algae, and some bacteria convert light energy into chemical energy. This process occurs primarily in the **chloroplasts** of plant cells and can be divided into two main stages: the **Light-Dependent Reactions** and the **Calvin Cycle** (Light-Independent Reactions).
+
+Here is a step-by-step breakdown of how it works:
+
+### 1. The Light-Dependent Reactions
+These reactions occur in the **thylakoid membranes** of the chloroplasts. Their primary goal is to capture light energy and convert it into chemical energy carriers (ATP and NADPH).
+
+*   **Absorption of Light:** Chlorophyll and other pigments in the photosystems (PSII and PSI) absorb photons from sunlight.
+*   **Water Splitting (Photolysis):** In Photosystem II (PSII), the absorbed energy excites electrons. To replace these lost electrons, water molecules ($H_2O$) are split. This releases:
+    *   **Oxygen ($O_2$):** Released as a byproduct into the atmosphere.
+    *   **Protons ($H^+$):** Pumped into the thylakoid lumen.
+    *   **Electrons:** Passed through an electron transport chain.
+*   **Electron Transport Chain:** As electrons move through the chain, their energy is used to pump more protons into the thylakoid space, creating a concentration gradient.
+*   **ATP Synthesis:** The protons flow back into the stroma through an enzyme called **ATP Synthase**. This flow drives the synthesis of **ATP** from ADP and inorganic phosphate.
+*   **NADPH Formation:** At the end of the chain (Photosystem I), electrons are re-energized by light and transferred to the carrier molecule **NADP+**, reducing it to **NADPH**.
+
+**Output of Light Reactions:** ATP, NADPH, and Oxygen ($O_2$).
+
+---
+
+### 2. The Calvin Cycle (Light-Independent Reactions)
+These reactions occur in the **stroma** (the fluid-filled space) of the chloroplast. They do not require light directly but rely on the ATP and NADPH produced in the previous stage to build sugar.
+
+The cycle consists of three main phases:
+
+*   **Phase 1: Carbon Fixation**
+    *   An enzyme called **Rubisco** attaches a carbon dioxide ($CO_2$) molecule from the air to a 5-carbon sugar called RuBP (Ribulose bisphosphate).
+    *   This creates an unstable 6-carbon compound that immediately splits into two 3-carbon molecules (3-PGA).
+
+*   **Phase 2: Reduction**
+    *   ATP provides energy, and NADPH provides high-energy electrons to convert the 3-PGA molecules into **G3P** (Glyceraldehyde-3-phosphate).
+    *   G3P is a sugar precursor. For every three $CO_2$ molecules that enter the cycle, one G3P molecule exits to be used by the plant.
+
+*   **Phase 3: Regeneration**
+    *   The remaining G3P molecules are rearranged using more ATP to regenerate the original RuBP molecule.
+    *   This allows the cycle to continue fixing more carbon dioxide.
+
+**Output of Calvin Cycle:** Glucose (and other carbohydrates) and regenerated RuBP.
+
+---
+
+### Summary of the Overall Equation
+The net chemical equation for photosynthesis summarizes the inputs and outputs:
+
+$$6CO_2 + 6H_2O + \text{Light Energy} \rightarrow C_6H_{12}O_6 + 6O_2$$
+
+*   **Inputs:** Carbon Dioxide, Water, and Sunlight.
+*   **Outputs:** Glucose (Sugar) and Oxygen.
+
+In essence, the **Light Reactions** act as the "battery charger," creating the energy currency (ATP) and electron carrier (NADPH), while the **Calvin Cycle** acts as the "factory," using that energy to assemble carbon atoms into glucose.
