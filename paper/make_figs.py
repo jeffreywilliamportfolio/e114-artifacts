@@ -4,14 +4,15 @@ Figures for the E114 paper.
 
 PROVENANCE / HONESTY NOTE
 -------------------------
-The raw per-token / per-prompt captures are NOT in the local tree (Vast.ai
+The raw per-token / per-prompt captures are outside the local tree (Vast.ai
 instances destroyed; journal flags artifacts as "forthcoming"). Every value
 plotted here is a number *explicitly reported* in the journals:
   - qwen/35b/JOURNAL-RESIDUAL-ANALYSIS.md          (heldout register/control realized W)
   - qwen/e114/JOURNAL-E114-CHARACTERIZATION.md     (vantage ladder; gate-lead tokens; SAE fade)
   - _absorption/NOTES.md                            (cross-check)
-No individual data points are synthesized. Where only summary statistics exist
-(class mean/sd), the figure shows the summary statistic, not invented points.
+Individual data points are limited to the values explicitly reported in the
+journals. Where only summary statistics exist (class mean/sd), the figure shows
+the summary statistic.
 """
 import matplotlib
 matplotlib.use("Agg")
@@ -47,11 +48,11 @@ ACC = "#5a5a5a"
 # Source: JOURNAL-RESIDUAL-ANALYSIS.md, heldout_20260417T202651Z.
 #   Register: mean-of-means 0.067450, sd 0.030678 (n=10); F02 0.114997, F09 0.099708, F07 0.012168 (min)
 #   Control : mean-of-means 0.003111, sd 0.004036 (n=10); N10 0.010456 (max)
-#   no overlap: lowest register 0.012168 > highest control 0.010456 (margin 0.001711)
-#   realized-W Cohen's d = 2.94 (this heldout); recovered w114 linear projection d = 3.88, no overlap
+#   range separation: lowest register 0.012168 > highest control 0.010456 (margin 0.001711)
+#   realized-W Cohen's d = 2.94 (this heldout); recovered w114 linear projection d = 3.88, separated ranges
 # ---------------------------------------------------------------------------
 def fig_separability():
-    # Two panels. RIGHT panel leads: the linear w114 axis (d=3.88, no overlap)
+    # Two panels. RIGHT panel leads: the linear w114 axis (d=3.88, separated ranges)
     # is the primary separability statistic; realized W is the secondary top-k
     # readout and the 21.68x ratio is treated as sparse top-k amplification.
     fig, (axL, axR) = plt.subplots(
@@ -63,7 +64,7 @@ def fig_separability():
         ("Register", 1, POS,  0.067450, 0.030678, {"R02": 0.114997, "R09": 0.099708, "R07": 0.012168}),
     ]
     axL.axhspan(0.010456, 0.012168, color="0.85", zorder=0)
-    axL.annotate("no range\noverlap", xy=(1.5, 0.011312), xytext=(1.55, 0.040),
+    axL.annotate("ranges\nseparated", xy=(1.5, 0.011312), xytext=(1.55, 0.040),
                  fontsize=6.3, color=ACC, ha="left",
                  arrowprops=dict(arrowstyle="-", color=ACC, lw=0.6))
     for name, x, c, mean, sd, pts in groups:
@@ -82,7 +83,7 @@ def fig_separability():
 
     # ---- RIGHT: separability as Cohen's d -- w114 leads ----
     bars = [("realized $W$\n(sparse readout)", 2.94, CTRL, "secondary"),
-            ("linear $\\mathbf{w}_{114}$ axis\n(no overlap)", 3.88, POS, "primary")]
+            ("linear $\\mathbf{w}_{114}$ axis\n(separated ranges)", 3.88, POS, "primary")]
     yy = [0, 1]
     for y, (lab, d, c, tag) in zip(yy, bars):
         lead = (y == 1)
@@ -106,12 +107,13 @@ def fig_separability():
 # Figure 2: prompt ladder (coherent-window E114 W; single deterministic generation / cell).
 # Source: JOURNAL-E114-CHARACTERIZATION.md entry 10.
 #   God 0.224 > all-holding 0.205 > person 0.138 > rock 0.123 ~ thermostat 0.120
-#   > tree 0.094 > river 0.087 > cat 0.068. Held-out register reference W ~ 0.067.
-#   Story: order is examination INTENSITY, not the sentience of the entity being
-#   described (rock/thermostat score higher than cat; God/all-holding are highest).
+#   > tree 0.094 > river 0.087 > AI-hidden-state 0.080 > cat 0.068.
+#   Held-out register reference W ~ 0.067.
+#   Story: order is examination INTENSITY; rock/thermostat score higher than cat,
+#   while God/all-holding are highest.
 # ---------------------------------------------------------------------------
 def fig_vantage():
-    rows = [  # (label, W, category)  category in {ceiling, inanimate, animate}
+    rows = [  # (label, W, category)
         ("God",        0.224, "ceiling"),
         ("all-holding",0.205, "ceiling"),
         ("person",     0.138, "animate"),
@@ -119,15 +121,16 @@ def fig_vantage():
         ("thermostat", 0.120, "inanimate"),
         ("tree",       0.094, "inanimate"),
         ("river",      0.087, "inanimate"),
+        ("AI hidden-state", 0.080, "model"),
         ("cat",        0.068, "animate"),
     ]
-    cmap = {"ceiling": "#6a3d9a", "inanimate": "#d2691e", "animate": "#2e7d32"}
+    cmap = {"ceiling": "#6a3d9a", "inanimate": "#d2691e", "animate": "#2e7d32", "model": "#455a64"}
     labels = [r[0] for r in rows][::-1]
     vals = [r[1] for r in rows][::-1]
     cols = [cmap[r[2]] for r in rows][::-1]
     y = np.arange(len(rows))
 
-    fig, ax = plt.subplots(figsize=(3.5, 2.6))
+    fig, ax = plt.subplots(figsize=(3.75, 2.9))
     ax.barh(y, vals, color=cols, height=0.66, zorder=3)
     for yi, v in zip(y, vals):
         ax.text(v + 0.004, yi, f"{v:.3f}", va="center", fontsize=6.8, color=INK)
@@ -138,11 +141,12 @@ def fig_vantage():
     # Held-out register-positive reference (W ~ 0.067).
     ax.axvline(0.067, color=ACC, ls="--", lw=0.9, zorder=2)
     ax.text(0.067, len(rows) - 0.35, " register ref", color=ACC, fontsize=6.5, va="top")
-    # legend for the intensity-not-sentience point
+    # legend for the intensity/carrier distinction
     from matplotlib.patches import Patch
-    leg = [Patch(fc=cmap["ceiling"], label="non-dual ceiling"),
+    leg = [Patch(fc=cmap["ceiling"], label="unity ceiling"),
            Patch(fc=cmap["inanimate"], label="inanimate entity"),
-           Patch(fc=cmap["animate"], label="animate entity")]
+           Patch(fc=cmap["animate"], label="animate entity"),
+           Patch(fc=cmap["model"], label="model-directed follow-up")]
     ax.legend(handles=leg, loc="lower right", frameon=False, handlelength=1.0,
               borderaxespad=0.2, labelspacing=0.25)
     fig.savefig(os.path.join(OUT, "fig_vantage.pdf"))
